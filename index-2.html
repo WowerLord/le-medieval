@@ -1,0 +1,2181 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="latin"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F3EEE2">
+<title>Le Médiéval · La Carte</title>
+<style>
+:root{--papier:#F4EFE3;--papier-2:#EBE3D2;--carte:#FBF8F0;--encre:#221E18;--encre-douce:#5E5647;--rouge:#9E1B1B;--rouge-clair:#B93131;--or-texte:#7A6118;--bord:#D9CFB9;--alerte-fond:#F7E2DC;--alerte-texte:#7C1512;--vert:#38602F;color-scheme:light;
+--titre:'Luminari','Palatino Linotype',Palatino,'Book Antiqua',Georgia,serif;
+--script:'Snell Roundhand','Apple Chancery','Segoe Script','Brush Script MT','Palatino Linotype',Georgia,cursive;
+--serif:'Palatino Linotype',Palatino,'Book Antiqua',Georgia,'Times New Roman',serif;
+--ui:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans','DejaVu Sans',Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--papier:#191712;--papier-2:#262118;--carte:#211D17;--encre:#F1E9D8;--encre-douce:#C6BBA4;--rouge:#E98A82;--rouge-clair:#F0A39B;--or-texte:#D9BC6A;--bord:#3E372B;--alerte-fond:#3A1D19;--alerte-texte:#FFB9AE;--vert:#9BCB8E;color-scheme:dark}}
+:root[data-theme=dark]{--papier:#191712;--papier-2:#262118;--carte:#211D17;--encre:#F1E9D8;--encre-douce:#C6BBA4;--rouge:#E98A82;--rouge-clair:#F0A39B;--or-texte:#D9BC6A;--bord:#3E372B;--alerte-fond:#3A1D19;--alerte-texte:#FFB9AE;--vert:#9BCB8E;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--encre);font:17px/1.55 var(--ui);background-color:#E3D7BD;
+background-image:
+ radial-gradient(120% 60% at 50% 0%,rgba(255,250,236,.85),transparent 60%),
+ radial-gradient(90% 55% at 15% 85%,rgba(150,115,60,.22),transparent 65%),
+ radial-gradient(90% 55% at 85% 20%,rgba(150,115,60,.18),transparent 65%),
+ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.55' numOctaves='4'/%3E%3CfeColorMatrix values='0 0 0 0 .38 0 0 0 0 .29 0 0 0 0 .15 0 0 0 .16 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23p)'/%3E%3C/svg%3E");
+background-attachment:fixed;
+padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) body{background-color:#14110C;background-image:radial-gradient(120% 60% at 50% 0%,rgba(70,58,38,.6),transparent 60%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.55' numOctaves='4'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .4 0 0 0 0 .25 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23p)'/%3E%3C/svg%3E")}}
+:root[data-theme=dark] body{background-color:#14110C}
+.page{position:relative;isolation:isolate;max-width:660px;margin:0 auto 40px;padding-bottom:36px;background:var(--carte);
+box-shadow:0 10px 40px rgba(70,45,15,.28);
+-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='40' preserveAspectRatio='none'%3E%3Cpath d='M0 40V10c40-8 60 6 100 2s60-12 100-6 60 12 100 8 60-14 100-8 60 10 100 6 60-10 100-4v32z' fill='%23000'/%3E%3C/svg%3E") top/100% 22px no-repeat,linear-gradient(#000 0 0) 0 22px/100% calc(100% - 44px) no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='40' preserveAspectRatio='none'%3E%3Cpath d='M0 0v30c40 8 60-6 100-2s60 12 100 6 60-12 100-8 60 14 100 8 60-10 100-6 60 10 100 4V0z' fill='%23000'/%3E%3C/svg%3E") bottom/100% 22px no-repeat;
+mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='40' preserveAspectRatio='none'%3E%3Cpath d='M0 40V10c40-8 60 6 100 2s60-12 100-6 60 12 100 8 60-14 100-8 60 10 100 6 60-10 100-4v32z' fill='%23000'/%3E%3C/svg%3E") top/100% 22px no-repeat,linear-gradient(#000 0 0) 0 22px/100% calc(100% - 44px) no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='40' preserveAspectRatio='none'%3E%3Cpath d='M0 0v30c40 8 60-6 100-2s60 12 100 6 60-12 100-8 60 14 100 8 60-10 100-6 60 10 100 4V0z' fill='%23000'/%3E%3C/svg%3E") bottom/100% 22px no-repeat;
+padding-top:26px}
+@media (min-width:700px){.page{border-radius:2px}}
+/* --- Couverture parchemin plein écran --- */
+#entree{position:fixed;inset:0;z-index:30;overflow:hidden;pointer-events:auto}
+#entree.parti{display:none}
+.volet{position:absolute;left:-2%;right:-2%;height:50.4%;overflow:hidden;
+background-color:#E6D9BC;background-repeat:no-repeat;background-size:104% 200%;
+background-image:
+ radial-gradient(120% 80% at 50% 40%,rgba(255,250,235,.95),rgba(232,220,192,0) 70%),
+ radial-gradient(60% 40% at 18% 22%,rgba(150,112,52,.18),transparent 70%),
+ radial-gradient(45% 30% at 82% 68%,rgba(140,105,50,.16),transparent 70%),
+ radial-gradient(130% 90% at 50% 50%,transparent 55%,rgba(96,68,28,.34) 100%),
+ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.5' numOctaves='4'/%3E%3CfeColorMatrix values='0 0 0 0 .36 0 0 0 0 .27 0 0 0 0 .13 0 0 0 .2 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23g)'/%3E%3C/svg%3E");
+transform-origin:center;will-change:transform;
+transition:transform 1.25s cubic-bezier(.66,0,.24,1),box-shadow 1.25s}
+.volet.haut::before{content:"";position:absolute;left:50%;bottom:-6%;width:min(52vw,240px);height:min(52vw,240px);transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(90,50,20,.22),transparent 72%);z-index:1}
+.volet.haut{top:0;background-position:center top;box-shadow:0 8px 22px rgba(70,45,15,.16)}
+.volet.bas{bottom:0;background-position:center bottom;box-shadow:0 -8px 22px rgba(70,45,15,.16)}
+.volet.haut::after,.volet.bas::after{content:'';position:absolute;left:0;right:0;height:22px}
+.volet.haut::after{bottom:0;background:linear-gradient(to bottom,transparent,rgba(96,68,28,.22))}
+.volet.bas::after{top:0;background:linear-gradient(to top,transparent,rgba(96,68,28,.14))}
+#entree.ouvert .volet.haut{transform:translateY(-101%)}
+#entree.ouvert .volet.bas{transform:translateY(101%)}
+.demi-sceau{position:absolute;left:50%;width:min(46vw,210px,26vh);height:auto;z-index:3;
+transition:transform 1.25s cubic-bezier(.66,0,.24,1)}
+.demi-sceau.haut{bottom:0;transform:translate(-50%,50%);clip-path:inset(0 0 50% 0)}
+.demi-sceau.bas{top:0;transform:translate(-50%,-50%);clip-path:inset(50% 0 0 0)}
+#entree.ouvert .demi-sceau.haut{transform:translate(-50%,44%) rotate(-7deg)}
+#entree.ouvert .demi-sceau.bas{transform:translate(-50%,-44%) rotate(6deg)}
+#entree.fissure .demi-sceau.haut{animation:choc .42s ease-in-out}
+#entree.fissure .demi-sceau.bas{animation:choc .42s .05s ease-in-out}
+@keyframes choc{0%,100%{translate:0 0}25%{translate:-4px -2px}50%{translate:4px 2px}75%{translate:-2px 1px}}
+.titre-couverture{position:absolute;left:0;right:0;bottom:max(20%,112px);text-align:center;z-index:4;padding:0 24px;
+transition:opacity .5s,transform .8s}
+#entree.ouvert .titre-couverture{opacity:0;transform:translateY(22px)}
+.titre-couverture h1{margin:0;font-family:var(--titre);font-weight:700;font-size:clamp(40px,13vw,68px);line-height:1;
+background:linear-gradient(180deg,var(--rouge-clair),var(--rouge) 55%,#6C0E0E);-webkit-background-clip:text;background-clip:text;color:transparent;
+filter:drop-shadow(0 2px 2px rgba(255,255,255,.5))}
+.titre-couverture p{margin:8px 0 0;font-family:var(--script);font-size:clamp(19px,5.4vw,26px);color:#4A3A22}
+.invite{position:absolute;left:0;right:0;bottom:max(16px,3%);text-align:center;z-index:5;font:600 15px var(--ui);color:#6A583A;transition:opacity .4s}
+#entree.ouvert .invite{opacity:0}
+.invite .fleche{display:block;margin:8px auto 0;width:20px;height:20px;border-right:2px solid var(--rouge);border-bottom:2px solid var(--rouge);transform:rotate(45deg);animation:descend 1.7s ease-in-out infinite}
+@keyframes descend{0%,100%{transform:rotate(45deg) translate(0,0);opacity:.45}50%{transform:rotate(45deg) translate(5px,5px);opacity:1}}
+#btn-entrer{position:absolute;left:50%;bottom:4%;transform:translateX(-50%);z-index:6;opacity:0;width:1px;height:1px;overflow:hidden}
+@media (prefers-reduced-motion:reduce){.volet,.demi-sceau,.titre-couverture{transition-duration:.01s}.invite .fleche{animation:none}.demi-sceau{animation:none!important}}
+/* --- En-tête de la carte --- */
+.entete{position:relative;text-align:center;padding:26px 18px 6px}
+.entete .sceau{width:104px;height:auto;display:block;margin:0 auto;filter:drop-shadow(0 6px 14px rgba(90,20,20,.25))}
+.entete h1{margin:10px 0 0;font-family:var(--titre);font-weight:700;font-size:clamp(34px,10vw,48px);line-height:1;
+background:linear-gradient(180deg,var(--rouge-clair),var(--rouge) 60%,#6E0F0F);-webkit-background-clip:text;background-clip:text;color:transparent}
+.entete .lieu{margin:4px 0 0;font-family:var(--script);font-size:20px;color:var(--encre-douce)}
+.accroche{margin:14px auto 0;max-width:34ch;font-family:var(--script);font-size:19px;line-height:1.45;color:var(--encre)}
+.filet{display:block;width:88%;max-width:420px;height:16px;margin:16px auto 0;color:var(--rouge)}
+.barre{position:sticky;top:env(safe-area-inset-top,0px);z-index:8;display:flex;gap:8px;padding:10px 12px;background:color-mix(in srgb,var(--papier) 92%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--bord)}
+.outil{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:52px;padding:8px 10px;border-radius:10px;border:1.5px solid var(--bord);background:var(--carte);color:var(--encre);font:650 14.5px/1.2 var(--ui);cursor:pointer;min-width:0}
+.outil .texte{white-space:normal;line-height:1.15;text-align:center}
+.outil svg{width:20px;height:20px;flex-shrink:0}
+.outil.actif{border-color:var(--rouge);color:var(--rouge)}
+.compteur{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:11px;background:var(--rouge);color:#fff;font-size:13px;padding:0 6px}
+.barre{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:6px 12px;align-items:stretch;z-index:8;background:var(--papier);-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:0 1px 0 var(--bord),0 4px 10px -6px rgba(0,0,0,.25)}
+.barre .outil{min-height:44px;padding:5px 8px;font-size:14px;border-radius:9px}
+.barre .outil svg{width:18px;height:18px}
+.enfant-wrap{padding:10px 12px 12px;position:relative;z-index:1}
+.enfant-wrap .enfant-lien{width:100%}
+.barre .outil{width:auto}
+.enfant-lien{grid-column:1/-1;position:relative;overflow:hidden;justify-content:center;gap:10px;
+background:linear-gradient(180deg,var(--carte),var(--papier-2));border-color:var(--rouge);color:var(--rouge)}
+.scene-chateau{display:block;flex-shrink:0;line-height:0}
+.enfant-lien .chateau{width:112px;height:42px;color:var(--rouge);opacity:.9;overflow:visible}
+.nuage{animation:derive 14s linear infinite}
+.nuage.n2{animation-duration:20s;animation-delay:-6s}
+@keyframes derive{0%{transform:translateX(-26px)}50%{transform:translateX(26px)}100%{transform:translateX(-26px)}}
+.enfant-lien{min-height:64px}
+
+.enfant-lien .texte{font-family:var(--serif);font-size:17px;font-weight:700;color:var(--encre)}
+.enfant-lien .fleche-bas{width:9px;height:9px;border-right:2px solid var(--rouge);border-bottom:2px solid var(--rouge);transform:rotate(45deg) translateY(-2px);flex-shrink:0}
+.enfant-lien:hover .chateau{opacity:1}
+.drapeau{font-size:20px;line-height:1;flex-shrink:0}
+.chevron{width:8px;height:8px;border-right:2px solid var(--rouge);border-bottom:2px solid var(--rouge);transform:rotate(45deg) translateY(-2px);flex-shrink:0}
+.outil.signal{animation:invite-clic 1.5s ease-in-out 2}
+@keyframes invite-clic{0%,100%{box-shadow:0 0 0 0 rgba(158,27,27,0)}50%{box-shadow:0 0 0 6px rgba(158,27,27,.12)}}
+.allergene.retirable{border:1px dashed var(--or-texte)}
+.etoile{font-style:normal;font-weight:800;color:var(--or-texte);margin-inline-start:1px}
+.note-retirable{margin:7px 0 0;font-size:13px;color:var(--or-texte);font-style:italic}
+.attente{margin:9px 0 0;padding:7px 11px;border-radius:6px;border:1px dashed var(--or-texte);background:var(--papier-2);color:var(--or-texte);font-size:13.5px;font-weight:650}
+.aucun{margin:9px 0 0;font-size:13.5px;font-weight:650;color:var(--vert)}
+.langues button .drapeau{margin-inline-end:8px}
+.cadre{position:absolute;inset:8px;pointer-events:none;color:var(--rouge);z-index:0}
+.cadre::before{content:"";position:absolute;inset:0;border:1.6px solid currentColor;opacity:.7}
+.cadre::after{content:"";position:absolute;inset:5px;border:.8px solid currentColor;opacity:.4}
+.coin{position:absolute;width:52px;height:52px}
+.ch-g{top:-2px;left:-2px}.ch-d{top:-2px;right:-2px;transform:scaleX(-1)}
+.cb-g{bottom:-2px;left:-2px;transform:scaleY(-1)}.cb-d{bottom:-2px;right:-2px;transform:scale(-1,-1)}
+.entete,.contenu,footer{position:relative;z-index:1}
+.grand-filet{display:block;width:100%;max-width:520px;margin:28px auto 2px;color:var(--rouge)}
+.contenu{padding:0 24px;position:relative;z-index:1}
+.barre+.contenu{margin-top:0}
+.avis{margin:12px 0 0;padding:10px 12px;border-radius:8px;border:1px solid var(--bord);background:var(--carte);color:var(--encre-douce);font-size:13px;text-align:center}
+.prevenir{margin:10px 0 0;padding:11px 14px;border-radius:8px;background:var(--alerte-fond);color:var(--alerte-texte);font-weight:650;display:flex;gap:10px;align-items:flex-start}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:14px 2px 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex-shrink:0;padding:8px 15px;border-radius:999px;border:1px solid var(--bord);background:var(--carte);color:var(--encre);text-decoration:none;font-weight:650;font-size:14px;font-family:var(--serif)}
+.resume-filtre{margin:14px 0 0;font-weight:700;color:var(--vert)}
+.categorie,.formules,.enfant{scroll-margin-top:68px}
+.categorie{margin-top:26px}
+.categorie h2,.formules h2,.enfant h2,.encart h2{font-family:var(--titre);font-weight:700;color:var(--rouge);letter-spacing:.01em}
+.categorie h2{margin:0;text-align:center;font-size:32px}
+.ornement{display:block;width:200px;height:16px;margin:6px auto 14px;color:var(--rouge)}
+.prix-cat{font-family:var(--serif);font-size:21px;color:var(--or-texte);margin-inline-start:8px;white-space:nowrap}
+.plats{display:flex;flex-direction:column;gap:12px}
+.plat{background:var(--carte);border:1px solid var(--bord);border-radius:4px;padding:16px 18px 13px;box-shadow:0 1px 2px rgba(60,40,10,.05)}
+.plat-tete{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.plat h3{margin:0;font-family:var(--serif);font-size:22px;line-height:1.25;font-weight:600;min-width:0;overflow-wrap:anywhere;color:var(--encre)}
+.plat h3::first-letter{color:var(--rouge);font-family:var(--titre);font-size:1.34em;line-height:1}
+.enfant h2::first-letter,.formules h2::first-letter{font-size:1.1em}
+html[lang=zh] .plat h3::first-letter,html[lang=ja] .plat h3::first-letter,html[lang=hi] .plat h3::first-letter,html[lang=bn] .plat h3::first-letter,html[lang=ar] .plat h3::first-letter,html[lang=ur] .plat h3::first-letter,html[lang=ru] .plat h3::first-letter{font-size:1em;font-family:inherit;color:inherit}
+.prix,.supplement{font-family:var(--serif);font-weight:700;font-size:19px;white-space:nowrap;color:var(--or-texte)}
+.supplement{color:var(--rouge)}
+html.latin .plat h3::first-letter{color:var(--rouge);font-family:var(--titre);font-size:1.34em;line-height:1}
+html.latin .categorie h2::first-letter,html.latin .formules h2::first-letter,html.latin .enfant h2::first-letter,html.latin .encart h2::first-letter{font-size:1.2em;color:var(--rouge-clair)}
+.description{margin:5px 0 0;font-family:var(--serif);font-style:italic;font-size:16px;line-height:1.45;color:var(--encre-douce)}
+.alerte{margin:9px 0 0;padding:6px 10px;border-radius:6px;background:var(--alerte-fond);color:var(--alerte-texte);font-weight:700;font-size:14px}
+.allergenes{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:10px}
+.etiquette{font-size:12px;font-weight:700;color:var(--encre-douce);letter-spacing:.06em;text-transform:uppercase;margin-inline-end:2px}
+.allergene{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:650;padding:3px 10px 3px 3px;border-radius:999px;background:var(--papier-2);color:var(--encre)}
+[dir=rtl] .allergene{padding:3px 3px 3px 10px}
+.allergene b,.legende b,.case b{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--rouge);color:#fff;font-size:12px;flex-shrink:0}
+.allergene.touche{background:var(--alerte-fond);color:var(--alerte-texte);outline:1.5px solid currentColor}
+.plat.exclu{border-color:var(--alerte-texte);box-shadow:inset 3px 0 0 var(--alerte-texte)}
+[dir=rtl] .plat.exclu{box-shadow:inset -3px 0 0 var(--alerte-texte)}
+.plat.exclu .plat-tete,.plat.exclu .description{opacity:.5;filter:grayscale(.6)}
+.note{margin:12px 6px 0;font-family:var(--serif);font-style:italic;color:var(--vert);text-align:center}
+.encart{margin:24px auto 0;max-width:430px;text-align:center;padding:12px 18px;border-top:1px solid var(--bord);border-bottom:1px solid var(--bord);background:var(--papier-2)}
+.encart h2{margin:0;font-size:25px;font-family:var(--titre)}
+.encart p{margin:3px 0 0;font-family:var(--script);font-size:17px;color:var(--encre-douce)}
+.formules{margin-top:26px;padding:18px 16px;background:var(--carte);border:1px solid var(--bord);border-radius:4px}
+.formules h2{margin:0;text-align:center;font-size:27px}
+.formules ul{list-style:none;margin:8px 0 0;padding:0}
+.formules li{display:flex;align-items:baseline;gap:8px;padding:6px 0;font-family:var(--serif);font-size:18px}
+.pointilles{flex:1;border-bottom:2px dotted var(--bord);min-width:16px;transform:translateY(-4px)}
+.enfant{position:relative;margin-top:26px;padding:20px 18px 16px;border:1px solid var(--bord);border-radius:4px;background:var(--carte);overflow:hidden}
+.enfant .ecu{position:absolute;inset:auto -6% -14% auto;width:190px;color:var(--rouge);opacity:.09;pointer-events:none}
+.enfant-tete{position:relative;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.enfant h2{margin:0;font-size:26px}
+.enfant .sous{position:relative;margin:2px 0 8px;font-family:var(--serif);font-weight:700}
+.enfant ul{position:relative;margin:0;padding:0;list-style:none;font-family:var(--serif);text-align:center}
+.enfant li{margin:5px 0;font-size:17px}
+footer{margin-top:28px;padding:0 16px;color:var(--encre-douce);font-size:14px;text-align:center}
+footer p{margin:6px 0}
+.legende-titre{font-family:var(--titre);font-weight:700;font-size:20px;color:var(--rouge);margin:22px 0 8px}
+.legende{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:6px 12px;text-align:start}
+.legende li{display:flex;align-items:center;gap:8px;color:var(--encre);flex-wrap:wrap}
+.fr{color:var(--encre-douce);font-size:12px}
+dialog{border:0;padding:0;border-radius:10px;max-width:min(560px,calc(100vw - 24px));width:100%;background:var(--carte);color:var(--encre);box-shadow:0 20px 60px rgba(40,20,0,.35)}
+dialog::backdrop{background:rgba(30,20,10,.55)}
+.dlg-tete{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:15px 18px;border-bottom:1px solid var(--bord)}
+.dlg-tete h2{margin:0;font-family:var(--titre);font-weight:700;font-size:21px;color:var(--rouge)}
+.fermer{width:44px;height:44px;border-radius:50%;border:1px solid var(--bord);background:transparent;color:var(--encre);font-size:20px;cursor:pointer;flex-shrink:0}
+.dlg-corps{padding:14px 18px;max-height:60vh;overflow:auto}
+.langues{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.langues button{min-height:48px;border-radius:8px;border:1.5px solid var(--bord);background:var(--papier);color:var(--encre);font:650 16px/1.2 var(--ui);cursor:pointer;padding:8px}
+.langues button[aria-pressed=true]{border-color:var(--rouge);background:var(--alerte-fond);color:var(--alerte-texte)}
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.case{display:flex;align-items:center;gap:10px;min-height:48px;padding:8px 10px;border-radius:8px;border:1.5px solid var(--bord);cursor:pointer;background:var(--papier)}
+.case input{width:20px;height:20px;accent-color:var(--rouge);flex-shrink:0}
+.case:has(input:checked){border-color:var(--rouge);background:var(--alerte-fond)}
+.dlg-pied{display:flex;gap:10px;justify-content:flex-end;padding:12px 18px 16px;border-top:1px solid var(--bord);flex-wrap:wrap}
+.btn{min-height:44px;padding:10px 18px;border-radius:8px;border:1.5px solid var(--bord);background:transparent;color:var(--encre);font:650 15px var(--ui);cursor:pointer}
+.btn.principal{background:var(--rouge);border-color:var(--rouge);color:#fff}
+button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--or-texte);outline-offset:2px}
+.anim :is(.plat,.formules,.enfant,.encart){opacity:0;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease}
+.anim :is(.plat,.formules,.enfant,.encart).vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.outil.signal{animation:none}.nuage{animation:none}.anim :is(.plat,.formules,.enfant,.encart){opacity:1;transform:none;transition:none}}
+.sr-titre{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+[hidden]{display:none!important}
+</style></head>
+<body>
+<div id="entree">
+  <div class="volet haut" aria-hidden="true"><img class="demi-sceau haut" src="data:image/webp;base64,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" alt=""></div>
+  <div class="volet bas" aria-hidden="true"><img class="demi-sceau bas" src="data:image/webp;base64,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" alt="">
+    <div class="titre-couverture"><h1>Le Médiéval</h1><p>Restaurant à Sarlat</p></div>
+    <p class="invite">Touchez pour ouvrir<span class="fleche" aria-hidden="true"></span></p>
+  </div>
+  <button type="button" id="btn-entrer">Découvrir la carte</button>
+</div>
+<div class="page">
+<div class="cadre" aria-hidden="true"><svg class="coin ch-g" viewBox="0 0 90 90"><path d="M4 86V26C4 14 14 4 26 4h60" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M11 86V28c0-9 8-17 17-17h58" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M26 11c9 0 12 6 12 10s-5 9-9 6 0-8 4-6 2 8-4 10-13-3-13-10z" fill="currentColor" opacity=".9"/><circle cx="44" cy="11" r="2.6" fill="currentColor"/><circle cx="11" cy="44" r="2.6" fill="currentColor"/><path d="M52 6c8 2 10 8 8 12s-8 4-9 0 3-6 6-3" fill="currentColor" opacity=".55"/><path d="M6 52c2 8 8 10 12 8s4-8 0-9-6 3-3 6" fill="currentColor" opacity=".55"/></svg><svg class="coin ch-d" viewBox="0 0 90 90"><path d="M4 86V26C4 14 14 4 26 4h60" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M11 86V28c0-9 8-17 17-17h58" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M26 11c9 0 12 6 12 10s-5 9-9 6 0-8 4-6 2 8-4 10-13-3-13-10z" fill="currentColor" opacity=".9"/><circle cx="44" cy="11" r="2.6" fill="currentColor"/><circle cx="11" cy="44" r="2.6" fill="currentColor"/><path d="M52 6c8 2 10 8 8 12s-8 4-9 0 3-6 6-3" fill="currentColor" opacity=".55"/><path d="M6 52c2 8 8 10 12 8s4-8 0-9-6 3-3 6" fill="currentColor" opacity=".55"/></svg><svg class="coin cb-g" viewBox="0 0 90 90"><path d="M4 86V26C4 14 14 4 26 4h60" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M11 86V28c0-9 8-17 17-17h58" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M26 11c9 0 12 6 12 10s-5 9-9 6 0-8 4-6 2 8-4 10-13-3-13-10z" fill="currentColor" opacity=".9"/><circle cx="44" cy="11" r="2.6" fill="currentColor"/><circle cx="11" cy="44" r="2.6" fill="currentColor"/><path d="M52 6c8 2 10 8 8 12s-8 4-9 0 3-6 6-3" fill="currentColor" opacity=".55"/><path d="M6 52c2 8 8 10 12 8s4-8 0-9-6 3-3 6" fill="currentColor" opacity=".55"/></svg><svg class="coin cb-d" viewBox="0 0 90 90"><path d="M4 86V26C4 14 14 4 26 4h60" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M11 86V28c0-9 8-17 17-17h58" fill="none" stroke="currentColor" stroke-width="1.1"/><path d="M26 11c9 0 12 6 12 10s-5 9-9 6 0-8 4-6 2 8-4 10-13-3-13-10z" fill="currentColor" opacity=".9"/><circle cx="44" cy="11" r="2.6" fill="currentColor"/><circle cx="11" cy="44" r="2.6" fill="currentColor"/><path d="M52 6c8 2 10 8 8 12s-8 4-9 0 3-6 6-3" fill="currentColor" opacity=".55"/><path d="M6 52c2 8 8 10 12 8s4-8 0-9-6 3-3 6" fill="currentColor" opacity=".55"/></svg></div>
+<header class="entete">
+  <img class="sceau" src="data:image/webp;base64,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" alt="">
+  <h1>La Carte</h1>
+  <p class="lieu">Restaurant à Sarlat</p>
+  <p class="accroche" data-t="accroche">Ici régalez-vous avec des produits frais et locaux cuisinés quotidiennement avec amour</p>
+  <svg class="filet" viewBox="0 0 400 16" aria-hidden="true"><path d="M2 8h150M248 8h150" stroke="currentColor" stroke-width="1.4"/><path d="M200 1l7 7-7 7-7-7z" fill="currentColor"/><circle cx="176" cy="8" r="2.4" fill="currentColor"/><circle cx="224" cy="8" r="2.4" fill="currentColor"/><path d="M152 8c5-6 13-6 17 0M248 8c-5-6-13-6-17 0" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+</header>
+<div class="barre">
+  <button type="button" class="outil signal" id="btn-langue" aria-haspopup="dialog"><span class="drapeau" id="drapeau-langue" aria-hidden="true">🇫🇷</span><span class="texte" id="nom-langue">Français</span><span class="chevron" aria-hidden="true"></span></button>
+  <button type="button" class="outil signal" id="btn-allergies" aria-haspopup="dialog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M12 8v5"/><circle cx="12" cy="16" r=".8" fill="currentColor"/></svg><span class="texte" id="txt-allergies">Liste des allergènes</span><span class="compteur" id="compteur" hidden>0</span><span class="chevron" aria-hidden="true"></span></button>
+</div>
+<div class="enfant-wrap">
+  <button type="button" class="outil enfant-lien" id="btn-enfant">
+    <span class="scene-chateau" aria-hidden="true"><svg class="chateau" viewBox="0 0 150 56"><g class="nuages"><path class="nuage n1" d="M8 14c0-4 4-7 8-6 1-4 7-5 9-1 4-1 7 2 6 5 3 1 3 5-1 5H12c-4 0-5-3-4-3z" fill="currentColor" opacity=".22"/><path class="nuage n2" d="M96 10c0-3 3-6 7-5 1-3 6-4 8-1 3-1 6 2 5 4 2 1 2 4-1 4h-17c-3 0-3-2-2-2z" fill="currentColor" opacity=".16"/></g><path d="M10 56V26h5v-6h6v6h5v-6h6v6h5v30z" fill="currentColor" opacity=".9"/><path d="M113 56V26h5v-6h6v6h5v-6h6v6h5v30z" fill="currentColor" opacity=".9"/><path d="M37 56V34h6v-5h6v5h6v-5h6v5h6v-5h6v5h6v-5h6v5h6v-5h6v5h6v22z" fill="currentColor" opacity=".72"/><path d="M66 56V44a9 9 0 0 1 18 0v12z" fill="#FBF8F0" opacity=".85"/><path d="M70 48h3v4h-3zM77 48h3v4h-3z" fill="currentColor" opacity=".5"/><path d="M18 32h4v5h-4zM124 32h4v5h-4zM45 40h4v5h-4zM101 40h4v5h-4z" fill="#FBF8F0" opacity=".7"/><path d="M15 20v-7l7 3zM118 20v-7l7 3z" fill="currentColor" opacity=".8"/></svg></span>
+    <span class="texte" id="txt-enfant">Menu enfant</span>
+    <span class="fleche-bas" aria-hidden="true"></span>
+  </button>
+</div>
+<div class="contenu">
+  <p class="prevenir"><span aria-hidden="true">&#9888;</span><span data-t="prevenir">Allergie ? Prévenez toujours votre serveur avant de commander.</span></p>
+  <p class="avis" id="bandeau-exemple">Allergènes indiqués à titre indicatif, en cours de validation par le chef. En cas d&#39;allergie, prévenez votre serveur.</p>
+  <nav class="chips" id="chips" aria-label="Sections"><a href="#sec-salades">Salades</a><a href="#sec-formules">Menu Retour de Campagne</a><a href="#sec-entrees">Entrées</a><a href="#sec-plats">Plats</a><a href="#sec-desserts">Desserts</a><a href="#sec-ecuyer">L&#39;assiette de L&#39;innocent</a></nav>
+  <main id="carte"><section class="categorie" id="sec-salades"><h2>Salades</h2><svg class="ornement" viewBox="0 0 240 20" aria-hidden="true"><path d="M4 10h82M154 10h82" stroke="currentColor" stroke-width="1.2"/><path d="M120 2l6 8-6 8-6-8z" fill="currentColor"/><circle cx="100" cy="10" r="2.2" fill="currentColor"/><circle cx="140" cy="10" r="2.2" fill="currentColor"/><path d="M86 10c4-6 10-6 12 0M154 10c-4-6-10-6-12 0" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><div class="plats"><article class="plat" data-plat="s1"><div class="plat-tete"><h3>Salade Sarladaise</h3><span class="prix">24 €</span></div><p class="description">Foie gras mi-cuit au torchon, magret séché maison, toast de cabécou rôti, salades mixtes, pickles de légumes, noix, vinaigrette au Monbaziliac</p><div class="allergenes"><span class="etiquette">Contient</span><span class="allergene retirable"><b>1</b>Gluten<i class="etoile" aria-hidden="true">*</i></span><span class="allergene retirable"><b>3</b>Œufs<i class="etoile" aria-hidden="true">*</i></span><span class="allergene retirable"><b>7</b>Lait<i class="etoile" aria-hidden="true">*</i></span><span class="allergene retirable"><b>8</b>Fruits à coque<i class="etoile" aria-hidden="true">*</i></span><span class="allergene retirable"><b>10</b>Moutarde<i class="etoile" aria-hidden="true">*</i></span></div><p class="note-retirable">* Peut être retiré du plat : demandez à votre serveur.</p></article><article class="plat" data-plat="s2"><div class="plat-tete"><h3>Salade Vegetale</h3><span class="prix">16 €</span></div><p class="description">Salades mixtes, légumes de saison, toasts de tapenade, noix, vinaigrette au miel</p><div class="allergenes"><span class="etiquette">Contient</span><span class="allergene retirable"><b>1</b>Gluten<i class="etoile" aria-hidden="true">*</i></span><span class="allergene retirable"><b>3</b>Œufs<i class="etoile" aria-hidden="true">*</i></span><span class="allergene retirable"><b>8</b>Fruits à coque<i class="etoile" aria-hidden="true">*</i></span><span class="allergene retirable"><b>10</b>Moutarde<i class="etoile" aria-hidden="true">*</i></span></div><p class="note-retirable">* Peut être retiré du plat : demandez à votre serveur.</p></article><article class="plat" data-plat="s3"><div class="plat-tete"><h3>La Tour Des Seigneurs</h3></div><p class="description">Plateau découverte pour 2 personnes (voir l&#39;ardoise)</p><p class="attente">Allergènes : en cours de validation par le chef. Demandez à votre serveur.</p></article></div></section><aside class="encart" id="sec-tapas"><h2>Tapas des Compagnons</h2><p>À partager à l&#39;apéritif – À l&#39;ardoise</p></aside><svg class="grand-filet" viewBox="0 0 520 44" aria-hidden="true"><path d="M6 22h190M324 22h190" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M196 22c14-9 26-9 34 0-8 9-20 9-34 0zM324 22c-14-9-26-9-34 0 8 9 20 9 34 0z" fill="currentColor" opacity=".85"/><circle cx="260" cy="22" r="11" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M260 4l4 10-4 8-4-8zM260 40l4-10-4-8-4 8zM242 22l10-4 8 4-8 4zM278 22l-10-4-8 4 8 4z" fill="currentColor"/><circle cx="260" cy="22" r="3" fill="currentColor"/><path d="M214 14c6-5 14-5 18 0M214 30c6 5 14 5 18 0M306 14c-6-5-14-5-18 0M306 30c-6 5-14 5-18 0" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><section class="formules" id="sec-formules"><h2>Menu Retour de Campagne</h2><svg class="ornement" viewBox="0 0 240 20" aria-hidden="true"><path d="M4 10h82M154 10h82" stroke="currentColor" stroke-width="1.2"/><path d="M120 2l6 8-6 8-6-8z" fill="currentColor"/><circle cx="100" cy="10" r="2.2" fill="currentColor"/><circle cx="140" cy="10" r="2.2" fill="currentColor"/><path d="M86 10c4-6 10-6 12 0M154 10c-4-6-10-6-12 0" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><ul><li><span class="formule-nom">Entrée + Plat</span><span class="pointilles" aria-hidden="true"></span><span class="prix">32 €</span></li><li><span class="formule-nom">Entrée + Plat + Dessert</span><span class="pointilles" aria-hidden="true"></span><span class="prix">39 €</span></li><li><span class="formule-nom">Plat + Dessert</span><span class="pointilles" aria-hidden="true"></span><span class="prix">28 €</span></li></ul></section><section class="categorie" id="sec-entrees"><h2>Entrées <span class="prix-cat">14 €</span></h2><svg class="ornement" viewBox="0 0 240 20" aria-hidden="true"><path d="M4 10h82M154 10h82" stroke="currentColor" stroke-width="1.2"/><path d="M120 2l6 8-6 8-6-8z" fill="currentColor"/><circle cx="100" cy="10" r="2.2" fill="currentColor"/><circle cx="140" cy="10" r="2.2" fill="currentColor"/><path d="M86 10c4-6 10-6 12 0M154 10c-4-6-10-6-12 0" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><div class="plats"><article class="plat" data-plat="e1"><div class="plat-tete"><h3>Foie gras rustique</h3><span class="supplement">+4 €</span></div><p class="description">Foie gras IGP, mi-cuit au Monbazillac au torchon, toasts et chutney du moment</p><p class="aucun">Aucun des 14 allergènes majeurs</p></article><article class="plat" data-plat="e2"><div class="plat-tete"><h3>Gaspacho ou soupe de saison</h3></div><p class="description">Potage froid ou chaud selon les légumes et les températures de saison</p><div class="allergenes"><span class="etiquette">Contient</span><span class="allergene"><b>1</b>Gluten</span><span class="allergene"><b>3</b>Œufs</span></div></article><article class="plat" data-plat="e3"><div class="plat-tete"><h3>Chaudron de Campagne</h3></div><p class="description">Œuf, crème fraîche d&#39;Isigny et champignons cultivés à « Campagne »</p><div class="allergenes"><span class="etiquette">Contient</span><span class="allergene retirable"><b>3</b>Œufs<i class="etoile" aria-hidden="true">*</i></span><span class="allergene"><b>7</b>Lait</span><span class="allergene"><b>12</b>Sulfites</span></div><p class="note-retirable">* Peut être retiré du plat : demandez à votre serveur.</p></article></div></section><section class="categorie" id="sec-plats"><h2>Plats <span class="prix-cat">22 €</span></h2><svg class="ornement" viewBox="0 0 240 20" aria-hidden="true"><path d="M4 10h82M154 10h82" stroke="currentColor" stroke-width="1.2"/><path d="M120 2l6 8-6 8-6-8z" fill="currentColor"/><circle cx="100" cy="10" r="2.2" fill="currentColor"/><circle cx="140" cy="10" r="2.2" fill="currentColor"/><path d="M86 10c4-6 10-6 12 0M154 10c-4-6-10-6-12 0" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><div class="plats"><article class="plat" data-plat="p1"><div class="plat-tete"><h3>Magret Fermier Flambé</h3></div><p class="description">Magret fermier servi rosé, jus corsé, flambé minute (ou pas) à la « liqueur inconnue »</p><div class="allergenes"><span class="etiquette">Contient</span><span class="allergene retirable"><b>7</b>Lait<i class="etoile" aria-hidden="true">*</i></span><span class="allergene retirable"><b>9</b>Céleri<i class="etoile" aria-hidden="true">*</i></span></div><p class="note-retirable">* Peut être retiré du plat : demandez à votre serveur.</p></article><article class="plat" data-plat="p2"><div class="plat-tete"><h3>Poisson Rôti Entier</h3></div><p class="description">Truite des eaux de l&#39;Inval, rôtie avec un risotto de petit épeautre, sauce beurre blanc, huile d&#39;herbes</p><div class="allergenes"><span class="etiquette">Contient</span><span class="allergene retirable"><b>1</b>Gluten<i class="etoile" aria-hidden="true">*</i></span><span class="allergene"><b>4</b>Poissons</span><span class="allergene retirable"><b>7</b>Lait<i class="etoile" aria-hidden="true">*</i></span><span class="allergene retirable"><b>12</b>Sulfites<i class="etoile" aria-hidden="true">*</i></span></div><p class="note-retirable">* Peut être retiré du plat : demandez à votre serveur.</p></article><article class="plat" data-plat="p3"><div class="plat-tete"><h3>Cuisse d&#39;Oie Confite</h3></div><p class="description">Cuisse d&#39;oie fermière confite et huile de romarin</p><div class="allergenes"><span class="etiquette">Contient</span><span class="allergene retirable"><b>7</b>Lait<i class="etoile" aria-hidden="true">*</i></span><span class="allergene retirable"><b>9</b>Céleri<i class="etoile" aria-hidden="true">*</i></span></div><p class="note-retirable">* Peut être retiré du plat : demandez à votre serveur.</p></article><article class="plat" data-plat="p4"><div class="plat-tete"><h3>Travers de Cochon Gaulois</h3></div><p class="description">Travers de cochon fermier cuit 8 heures à basse température dans une marinade miel, tomate, moutarde</p><div class="allergenes"><span class="etiquette">Contient</span><span class="allergene retirable"><b>7</b>Lait<i class="etoile" aria-hidden="true">*</i></span><span class="allergene retirable"><b>9</b>Céleri<i class="etoile" aria-hidden="true">*</i></span><span class="allergene"><b>10</b>Moutarde</span><span class="allergene"><b>12</b>Sulfites</span></div><p class="note-retirable">* Peut être retiré du plat : demandez à votre serveur.</p></article></div><p class="note">*Nos viandes sont accompagnées de différents légumes anciens, cuisinés et texturés selon l&#39;humeur du chef</p></section><section class="categorie" id="sec-desserts"><h2>Desserts <span class="prix-cat">8 €</span></h2><svg class="ornement" viewBox="0 0 240 20" aria-hidden="true"><path d="M4 10h82M154 10h82" stroke="currentColor" stroke-width="1.2"/><path d="M120 2l6 8-6 8-6-8z" fill="currentColor"/><circle cx="100" cy="10" r="2.2" fill="currentColor"/><circle cx="140" cy="10" r="2.2" fill="currentColor"/><path d="M86 10c4-6 10-6 12 0M154 10c-4-6-10-6-12 0" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><div class="plats"><article class="plat" data-plat="d1"><div class="plat-tete"><h3>Brioche Perdue</h3></div><p class="description">Servie avec un caramel au beurre salé et une crème montée aux poivres et baies torréfiées</p><div class="allergenes"><span class="etiquette">Contient</span><span class="allergene"><b>1</b>Gluten</span><span class="allergene"><b>3</b>Œufs</span><span class="allergene"><b>7</b>Lait</span></div></article><article class="plat" data-plat="d2"><div class="plat-tete"><h3>Tartelette Poire Amande</h3></div><p class="description">Crème amandine et brunoise de poire pochée à la verveine</p><div class="allergenes"><span class="etiquette">Contient</span><span class="allergene"><b>1</b>Gluten</span><span class="allergene"><b>3</b>Œufs</span><span class="allergene"><b>7</b>Lait</span><span class="allergene"><b>8</b>Fruits à coque</span></div></article><article class="plat" data-plat="d3"><div class="plat-tete"><h3>Mousse de la Reine</h3><span class="supplement">+1 €</span></div><p class="description">Mousse au chocolat sans sucre, piment d&#39;Espelette, grué de cacao et brisures de crêpes</p><div class="allergenes"><span class="etiquette">Contient</span><span class="allergene retirable"><b>1</b>Gluten<i class="etoile" aria-hidden="true">*</i></span><span class="allergene"><b>3</b>Œufs</span><span class="allergene retirable"><b>7</b>Lait<i class="etoile" aria-hidden="true">*</i></span></div><p class="note-retirable">* Peut être retiré du plat : demandez à votre serveur.</p></article></div></section><section class="enfant" id="sec-ecuyer"><svg class="ecu" viewBox="0 0 200 200" aria-hidden="true" fill="currentColor"><path d="M100 18l70 20v52c0 44-30 72-70 92-40-20-70-48-70-92V38z" opacity=".85"/><path d="M18 26l38 30-8 10-38-30zM182 26l-38 30 8 10 38-30z" opacity=".6"/></svg><div class="enfant-tete"><h2>L&#39;assiette de L&#39;innocent</h2><span class="prix">14 €</span></div><p class="sous">Menu Enfant (-12 ans)</p><ul><li>Toasts de rillettes d&#39;oie</li><li>Filets de volaille panés</li><li>Purée du chef</li><li>Compote maison</li></ul><div class="allergenes"><span class="etiquette">Contient</span><span class="allergene retirable"><b>5</b>Arachides<i class="etoile" aria-hidden="true">*</i></span><span class="allergene retirable"><b>8</b>Fruits à coque<i class="etoile" aria-hidden="true">*</i></span></div><p class="note-retirable">* Peut être retiré du plat : demandez à votre serveur.</p></section></main>
+</div>
+<footer>
+  <p data-t="prix">Tarif net, service compris</p>
+  <p id="note-trad" hidden></p>
+  <div id="legende"><h2 class="legende-titre">Les 14 allergènes majeurs</h2><ol class="legende"><li><b>1</b>Gluten</li><li><b>2</b>Crustacés</li><li><b>3</b>Œufs</li><li><b>4</b>Poissons</li><li><b>5</b>Arachides</li><li><b>6</b>Soja</li><li><b>7</b>Lait</li><li><b>8</b>Fruits à coque</li><li><b>9</b>Céleri</li><li><b>10</b>Moutarde</li><li><b>11</b>Sésame</li><li><b>12</b>Sulfites</li><li><b>13</b>Lupin</li><li><b>14</b>Mollusques</li></ol></div>
+  <p class="adresse">3 rue de l&#39;Olivier, 24200 Sarlat-la-Canéda</p>
+</footer>
+</div>
+<dialog id="dlg-langue" aria-labelledby="titre-langue">
+  <div class="dlg-tete"><h2 id="titre-langue" data-t="choisir">Choisissez votre langue</h2><button type="button" class="fermer" data-fermer aria-label="Fermer">&#10005;</button></div>
+  <div class="dlg-corps"><div class="langues" id="liste-langues"></div></div>
+</dialog>
+<dialog id="dlg-allergies" aria-labelledby="titre-allergies">
+  <div class="dlg-tete"><h2 id="titre-allergies">Je suis allergique à :</h2><button type="button" class="fermer" data-fermer aria-label="Fermer">&#10005;</button></div>
+  <div class="dlg-corps"><div class="cases" id="cases"></div></div>
+  <div class="dlg-pied"><button type="button" class="btn" id="btn-effacer">Tout effacer</button><button type="button" class="btn principal" data-fermer id="btn-voir">Voir la carte</button></div>
+</dialog>
+<script>var MENU_DATA = {
+ "restaurant": {
+  "nom": "Le Médiéval",
+  "adresse": "3 rue de l'Olivier, 24200 Sarlat-la-Canéda"
+ },
+ "test": false,
+ "allergenesValides": true,
+ "exemple": true,
+ "drapeaux": {
+  "fr": "🇫🇷",
+  "en": "🇬🇧",
+  "zh": "🇨🇳",
+  "hi": "🇮🇳",
+  "es": "🇪🇸",
+  "ar": "🇸🇦",
+  "bn": "🇧🇩",
+  "pt": "🇵🇹",
+  "ru": "🇷🇺",
+  "id": "🇮🇩",
+  "ur": "🇵🇰",
+  "de": "🇩🇪",
+  "ja": "🇯🇵",
+  "nl": "🇳🇱",
+  "it": "🇮🇹"
+ },
+ "langues": [
+  [
+   "fr",
+   "Français",
+   "ltr"
+  ],
+  [
+   "en",
+   "English",
+   "ltr"
+  ],
+  [
+   "zh",
+   "中文",
+   "ltr"
+  ],
+  [
+   "hi",
+   "हिन्दी",
+   "ltr"
+  ],
+  [
+   "es",
+   "Español",
+   "ltr"
+  ],
+  [
+   "ar",
+   "العربية",
+   "rtl"
+  ],
+  [
+   "bn",
+   "বাংলা",
+   "ltr"
+  ],
+  [
+   "pt",
+   "Português",
+   "ltr"
+  ],
+  [
+   "ru",
+   "Русский",
+   "ltr"
+  ],
+  [
+   "id",
+   "Bahasa Indonesia",
+   "ltr"
+  ],
+  [
+   "ur",
+   "اردو",
+   "rtl"
+  ],
+  [
+   "de",
+   "Deutsch",
+   "ltr"
+  ],
+  [
+   "ja",
+   "日本語",
+   "ltr"
+  ],
+  [
+   "nl",
+   "Nederlands",
+   "ltr"
+  ],
+  [
+   "it",
+   "Italiano",
+   "ltr"
+  ]
+ ],
+ "cles": [
+  "carte",
+  "langue",
+  "choisir",
+  "trad",
+  "prevenir",
+  "prix",
+  "attente",
+  "test",
+  "accroche",
+  "salades",
+  "s1n",
+  "s1d",
+  "s2n",
+  "s2d",
+  "s3n",
+  "s3d",
+  "tapas",
+  "tapasTexte",
+  "ecuyer",
+  "enfant",
+  "k1",
+  "k2",
+  "k3",
+  "k4",
+  "formules",
+  "f1",
+  "f2",
+  "f3",
+  "entrees",
+  "e1n",
+  "e1d",
+  "e2n",
+  "e2d",
+  "e3n",
+  "e3d",
+  "plats",
+  "p1n",
+  "p1d",
+  "p2n",
+  "p2d",
+  "p3n",
+  "p3d",
+  "p4n",
+  "p4d",
+  "noteViandes",
+  "desserts",
+  "d1n",
+  "d1d",
+  "d2n",
+  "d2d",
+  "d3n",
+  "d3d"
+ ],
+ "ui": {
+  "fr": [
+   "La carte",
+   "Langue",
+   "Choisissez votre langue",
+   "",
+   "Allergie ? Prévenez toujours votre serveur avant de commander.",
+   "Tarif net, service compris",
+   "Allergènes : en cours de validation par le chef. Demandez à votre serveur.",
+   "Version de test : textes et allergènes en cours de validation par le restaurant",
+   "Ici régalez-vous avec des produits frais et locaux cuisinés quotidiennement avec amour",
+   "Salades",
+   "Salade Sarladaise",
+   "Foie gras mi-cuit au torchon, magret séché maison, toast de cabécou rôti, salades mixtes, pickles de légumes, noix, vinaigrette au Monbaziliac",
+   "Salade Vegetale",
+   "Salades mixtes, légumes de saison, toasts de tapenade, noix, vinaigrette au miel",
+   "La Tour Des Seigneurs",
+   "Plateau découverte pour 2 personnes (voir l'ardoise)",
+   "Tapas des Compagnons",
+   "À partager à l'apéritif – À l'ardoise",
+   "L'assiette de L'innocent",
+   "Menu Enfant (-12 ans)",
+   "Toasts de rillettes d'oie",
+   "Filets de volaille panés",
+   "Purée du chef",
+   "Compote maison",
+   "Menu Retour de Campagne",
+   "Entrée + Plat",
+   "Entrée + Plat + Dessert",
+   "Plat + Dessert",
+   "Entrées",
+   "Foie gras rustique",
+   "Foie gras IGP, mi-cuit au Monbazillac au torchon, toasts et chutney du moment",
+   "Gaspacho ou soupe de saison",
+   "Potage froid ou chaud selon les légumes et les températures de saison",
+   "Chaudron de Campagne",
+   "Œuf, crème fraîche d'Isigny et champignons cultivés à « Campagne »",
+   "Plats",
+   "Magret Fermier Flambé",
+   "Magret fermier servi rosé, jus corsé, flambé minute (ou pas) à la « liqueur inconnue »",
+   "Poisson Rôti Entier",
+   "Truite des eaux de l'Inval, rôtie avec un risotto de petit épeautre, sauce beurre blanc, huile d'herbes",
+   "Cuisse d'Oie Confite",
+   "Cuisse d'oie fermière confite et huile de romarin",
+   "Travers de Cochon Gaulois",
+   "Travers de cochon fermier cuit 8 heures à basse température dans une marinade miel, tomate, moutarde",
+   "*Nos viandes sont accompagnées de différents légumes anciens, cuisinés et texturés selon l'humeur du chef",
+   "Desserts",
+   "Brioche Perdue",
+   "Servie avec un caramel au beurre salé et une crème montée aux poivres et baies torréfiées",
+   "Tartelette Poire Amande",
+   "Crème amandine et brunoise de poire pochée à la verveine",
+   "Mousse de la Reine",
+   "Mousse au chocolat sans sucre, piment d'Espelette, grué de cacao et brisures de crêpes"
+  ],
+  "en": [
+   "The menu",
+   "Language",
+   "Choose your language",
+   "Automatic translation: if in doubt, the French version prevails.",
+   "Allergy? Always tell your server before ordering.",
+   "Net price, service included",
+   "Allergens: being checked by the chef. Please ask your server.",
+   "Test version: texts and allergens are being checked by the restaurant",
+   "Indulge yourselves in our dishes made with fresh, local products and cooked daily with love",
+   "Salads",
+   "Sarlat Salad",
+   "Foie gras half-cooked in cloth, homemade dried duck breast, roasted cabécou cheese toast, mixed salad, pickled vegetables, walnuts, Monbazillac vinaigrette",
+   "Vegetable Salad",
+   "Mixed salad, roasted seasonal vegetables, toast with tapenade, walnuts, honey vinaigrette",
+   "The Lords' Tower",
+   "Tasting platter for two (see chalkboard)",
+   "The Companions' Tapas",
+   "To share as an aperitif – See chalkboard",
+   "The Squire's Feast",
+   "Kid's Menu (-12 years)",
+   "Goose rillettes toast",
+   "Breaded chicken fillets",
+   "Chef's mashed potatoes",
+   "Homemade compote",
+   "Back from the Countryside Menu",
+   "Starter + Main",
+   "Starter + Main + Dessert",
+   "Main + Dessert",
+   "Starters",
+   "Rustic Foie Gras",
+   "PGI foie gras, half-cooked in cloth with Monbazillac, toast and chutney of the moment",
+   "Gazpacho or soup of the season",
+   "Cold or hot soup, depending on the season's vegetables and temperatures",
+   "Countryside Cauldron",
+   "Egg, Isigny crème fraîche and mushrooms grown at « Campagne »",
+   "Mains",
+   "Flambéed Farm Duck Breast",
+   "Farm duck breast served pink, rich jus, flambéed to order (or not) with « liqueur inconnue »",
+   "Whole Roasted Fish",
+   "Trout from the Inval waters, roasted with a small spelt risotto, beurre blanc sauce, herb oil",
+   "Confit Goose Leg",
+   "Farm goose leg confit with rosemary oil",
+   "Gallic Pork Ribs",
+   "Farm pork ribs cooked for 8 hours at low temperature in a honey, tomato and mustard marinade",
+   "*Our meats come with a selection of heritage vegetables, cooked and textured at the chef's whim",
+   "Desserts",
+   "Lost Brioche",
+   "Served with salted butter caramel and whipped cream with roasted peppers and berries",
+   "Pear and Almond Tartlet",
+   "Almond cream and diced pear poached with verbena",
+   "Queen's Mousse",
+   "Sugar-free chocolate mousse, Espelette pepper, cocoa nibs and crêpe shards"
+  ],
+  "es": [
+   "La carta",
+   "Idioma",
+   "Elija su idioma",
+   "Traducción automática: en caso de duda, prevalece la versión francesa.",
+   "¿Alergia? Avise siempre a su camarero antes de pedir.",
+   "Precio neto, servicio incluido",
+   "Alérgenos: en revisión por el chef. Pregunte a su camarero.",
+   "Versión de prueba: textos y alérgenos en revisión por el restaurante",
+   "Déjese tentar por nuestros platos elaborados con productos frescos y locales, cocinados cada día con cariño",
+   "Ensaladas",
+   "Ensalada Sarladesa",
+   "Foie gras semicocido al paño, magret de pato curado casero, tostada de queso cabécou asado, ensalada variada, encurtidos de verduras, nueces, vinagreta de Monbazillac",
+   "Ensalada Vegetal",
+   "Ensalada variada, verduras de temporada asadas, tostada con tapenade, nueces, vinagreta de miel",
+   "La Torre de los Señores",
+   "Tabla para descubrir, para 2 personas (ver pizarra)",
+   "Las tapas de los Compañeros",
+   "Para compartir como aperitivo: consulte la pizarra",
+   "El festín del escudero",
+   "Menú infantil (menores de 12 años)",
+   "Tostada de rillettes de oca",
+   "Filetes de pollo empanados",
+   "Puré del chef",
+   "Compota casera",
+   "Menú Regreso del Campo",
+   "Entrante + Principal",
+   "Entrante + Principal + Postre",
+   "Principal + Postre",
+   "Entrantes",
+   "Foie gras rústico",
+   "Foie gras IGP, semicocido al torchon con Monbazillac, tostadas y chutney del momento",
+   "Gazpacho o sopa de temporada",
+   "Crema fría o caliente según las verduras y las temperaturas de la estación",
+   "Caldero Campestre",
+   "Huevo, crème fraîche de Isigny y setas cultivadas en « Campagne »",
+   "Platos principales",
+   "Magret de Pato de Granja Flambeado",
+   "Magret de granja servido rosado, jugo intenso, flambeado al momento (o no) con « liqueur inconnue »",
+   "Pescado Entero Asado",
+   "Trucha de las aguas del Inval, asada con risotto de espelta pequeña, salsa beurre blanc y aceite de hierbas",
+   "Muslo de Oca Confitado",
+   "Muslo de oca de granja confitado y aceite de romero",
+   "Costillar de Cerdo Galo",
+   "Costillar de cerdo de granja cocinado 8 horas a baja temperatura en una marinada de miel, tomate y mostaza",
+   "*Nuestras carnes se acompañan de distintas verduras antiguas, cocinadas y texturizadas según el humor del chef",
+   "Postres",
+   "Brioche Perdida",
+   "Servida con caramelo de mantequilla salada y nata montada con pimientas y bayas tostadas",
+   "Tartaleta de Pera y Almendra",
+   "Crema de almendra y brunoise de pera escalfada a la verbena",
+   "Mousse de la Reina",
+   "Mousse de chocolate sin azúcar, pimiento de Espelette, grué de cacao y trocitos de crepe"
+  ],
+  "de": [
+   "Speisekarte",
+   "Sprache",
+   "Wählen Sie Ihre Sprache",
+   "Automatische Übersetzung: Im Zweifel gilt die französische Fassung.",
+   "Allergie? Informieren Sie vor der Bestellung immer Ihre Bedienung.",
+   "Nettopreis, Bedienung inklusive",
+   "Allergene: werden vom Küchenchef geprüft. Bitte fragen Sie Ihre Bedienung.",
+   "Testversion: Texte und Allergene werden vom Restaurant geprüft",
+   "Lassen Sie sich von unseren Gerichten verwöhnen: aus frischen, regionalen Produkten, täglich mit Liebe zubereitet",
+   "Salate",
+   "Salat nach Sarlat-Art",
+   "Halbgegarte Stopfleber im Tuch, hausgemachte getrocknete Entenbrust, gerösteter Cabécou-Käsetoast, gemischter Salat, eingelegtes Gemüse, Walnüsse, Monbazillac-Vinaigrette",
+   "Gemüsesalat",
+   "Gemischter Salat, geröstetes Saisongemüse, Tapenade-Toast, Walnüsse, Honigvinaigrette",
+   "Der Turm der Herren",
+   "Entdeckerplatte für 2 Personen (siehe Tafel)",
+   "Die Tapas der Gefährten",
+   "Zum Teilen als Aperitif: siehe Tafel",
+   "Das Festmahl des Knappen",
+   "Kindermenü (unter 12 Jahren)",
+   "Toast mit Gänserillettes",
+   "Panierte Hähnchenfilets",
+   "Kartoffelpüree des Küchenchefs",
+   "Hausgemachtes Kompott",
+   "Menü Rückkehr aufs Land",
+   "Vorspeise + Hauptgericht",
+   "Vorspeise + Hauptgericht + Dessert",
+   "Hauptgericht + Dessert",
+   "Vorspeisen",
+   "Rustikale Stopfleber",
+   "Stopfleber (g.g.A.), halbgegart im Tuch mit Monbazillac, Toast und Chutney des Augenblicks",
+   "Gazpacho oder Suppe der Saison",
+   "Kalte oder warme Suppe, je nach Gemüse und Temperatur der Jahreszeit",
+   "Ländlicher Kessel",
+   "Ei, Crème fraîche aus Isigny und in « Campagne » gezüchtete Pilze",
+   "Hauptgerichte",
+   "Flambierte Bauern-Entenbrust",
+   "Bauernentenbrust rosa serviert, kräftiger Jus, auf Wunsch am Tisch mit « liqueur inconnue » flambiert",
+   "Ganzer gebratener Fisch",
+   "Forelle aus dem Inval, gebraten mit Einkorn-Risotto, Beurre-blanc-Soße und Kräuteröl",
+   "Confierte Gänsekeule",
+   "Confierte Bauerngänsekeule mit Rosmarinöl",
+   "Gallische Schweinerippchen",
+   "Bauernschweinerippchen, 8 Stunden bei Niedrigtemperatur in einer Marinade aus Honig, Tomate und Senf gegart",
+   "*Unsere Fleischgerichte werden mit alten Gemüsesorten serviert, zubereitet nach Laune des Küchenchefs",
+   "Desserts",
+   "Verlorene Brioche",
+   "Serviert mit gesalzenem Butterkaramell und Sahne mit gerösteten Pfeffern und Beeren",
+   "Birnen-Mandel-Törtchen",
+   "Mandelcreme und Würfel von mit Verbene pochierter Birne",
+   "Mousse der Königin",
+   "Zuckerfreie Schokoladenmousse, Espelette-Pfeffer, Kakaonibs und Crêpe-Stückchen"
+  ],
+  "nl": [
+   "De kaart",
+   "Taal",
+   "Kies uw taal",
+   "Automatische vertaling: bij twijfel geldt de Franse versie.",
+   "Allergie? Meld het altijd aan uw ober voordat u bestelt.",
+   "Nettoprijs, bediening inbegrepen",
+   "Allergenen: worden door de chef gecontroleerd. Vraag het uw ober.",
+   "Testversie: teksten en allergenen worden door het restaurant gecontroleerd",
+   "Laat u verleiden door onze gerechten, dagelijks met liefde bereid van verse, lokale producten",
+   "Salades",
+   "Salade op Sarlat-wijze",
+   "Halfgegaarde foie gras in doek, huisgedroogde eendenborst, geroosterde toast met cabécou-kaas, gemengde salade, ingelegde groenten, walnoten, Monbazillac-vinaigrette",
+   "Groentesalade",
+   "Gemengde salade, geroosterde seizoensgroenten, toast met tapenade, walnoten, honingvinaigrette",
+   "De Toren der Heren",
+   "Ontdekkingsplank voor 2 personen (zie krijtbord)",
+   "De tapas van de Gezellen",
+   "Om te delen als aperitief: zie het krijtbord",
+   "Het feestmaal van de schildknaap",
+   "Kindermenu (tot 12 jaar)",
+   "Toast met ganzenrillettes",
+   "Gepaneerde kipfilets",
+   "Aardappelpuree van de chef",
+   "Huisgemaakte compote",
+   "Menu Terug van het Platteland",
+   "Voorgerecht + Hoofdgerecht",
+   "Voorgerecht + Hoofdgerecht + Dessert",
+   "Hoofdgerecht + Dessert",
+   "Voorgerechten",
+   "Rustieke foie gras",
+   "Foie gras (BGA), halfgegaard in doek met Monbazillac, toast en chutney van het moment",
+   "Gazpacho of soep van het seizoen",
+   "Koude of warme soep, afhankelijk van de groenten en de temperatuur van het seizoen",
+   "Landelijke Ketel",
+   "Ei, crème fraîche uit Isigny en paddenstoelen gekweekt in « Campagne »",
+   "Hoofdgerechten",
+   "Geflambeerde Boerderij-Eendenborst",
+   "Eendenborst van de boerderij rosé geserveerd, krachtige jus, à la minute geflambeerd (of niet) met « liqueur inconnue »",
+   "Hele Geroosterde Vis",
+   "Forel uit het water van de Inval, geroosterd met eenkoornrisotto, beurre-blancsaus en kruidenolie",
+   "Gekonfijte Ganzenbout",
+   "Gekonfijte boerderijganzenbout met rozemarijnolie",
+   "Gallische Varkensribben",
+   "Varkensribben van de boerderij, 8 uur op lage temperatuur gegaard in een marinade van honing, tomaat en mosterd",
+   "*Bij ons vlees serveren wij vergeten groenten, bereid naar de luim van de chef",
+   "Desserts",
+   "Verloren Brioche",
+   "Geserveerd met gezouten boterkaramel en slagroom met geroosterde peper en bessen",
+   "Peer-Amandeltaartje",
+   "Amandelcrème en brunoise van met verbena gepocheerde peer",
+   "Mousse van de Koningin",
+   "Suikervrije chocolademousse, Espelette-peper, cacaonibs en stukjes crêpe"
+  ],
+  "it": [
+   "Il menù",
+   "Lingua",
+   "Scegli la tua lingua",
+   "Traduzione automatica: in caso di dubbio, fa fede la versione francese.",
+   "Allergie? Avvisa sempre il cameriere prima di ordinare.",
+   "Prezzo netto, servizio incluso",
+   "Allergeni: in fase di verifica da parte dello chef. Chiedi al cameriere.",
+   "Versione di prova: testi e allergeni in fase di verifica da parte del ristorante",
+   "Lasciatevi tentare dai nostri piatti preparati ogni giorno con amore, con prodotti freschi e locali",
+   "Insalate",
+   "Insalata alla Sarladaise",
+   "Foie gras semicotto al torchon, magret d'anatra essiccato fatto in casa, crostino di formaggio cabécou arrosto, insalata mista, verdure sottaceto, noci, vinaigrette al Monbazillac",
+   "Insalata di Verdure",
+   "Insalata mista, verdure di stagione arrosto, crostino con tapenade, noci, vinaigrette al miele",
+   "La Torre dei Signori",
+   "Tagliere degustazione per 2 persone (vedi lavagna)",
+   "Le tapas dei Compagni",
+   "Da condividere come aperitivo: vedi la lavagna",
+   "Il banchetto dello scudiero",
+   "Menù bambini (sotto i 12 anni)",
+   "Crostino con rillettes d'oca",
+   "Filetti di pollo impanati",
+   "Purè dello chef",
+   "Composta fatta in casa",
+   "Menù Ritorno dalla Campagna",
+   "Antipasto + Secondo",
+   "Antipasto + Secondo + Dolce",
+   "Secondo + Dolce",
+   "Antipasti",
+   "Foie gras rustico",
+   "Foie gras IGP, semicotto al torchon con Monbazillac, crostini e chutney del momento",
+   "Gazpacho o zuppa di stagione",
+   "Zuppa fredda o calda secondo le verdure e le temperature della stagione",
+   "Calderone di Campagna",
+   "Uovo, crème fraîche di Isigny e funghi coltivati a « Campagne »",
+   "Secondi",
+   "Petto d'Anatra di Fattoria Flambé",
+   "Petto d'anatra servito rosa, fondo corposo, flambé al momento (o no) con « liqueur inconnue »",
+   "Pesce Intero Arrosto",
+   "Trota delle acque dell'Inval, arrosto con risotto di farro piccolo, salsa beurre blanc e olio alle erbe",
+   "Coscia d'Oca Confit",
+   "Coscia d'oca di fattoria confit e olio al rosmarino",
+   "Costine di Maiale Galliche",
+   "Costine di maiale di fattoria cotte 8 ore a bassa temperatura in una marinata di miele, pomodoro e senape",
+   "*Le nostre carni sono accompagnate da verdure antiche, cucinate e lavorate secondo l'estro dello chef",
+   "Dolci",
+   "Brioche Perduta",
+   "Servita con caramello al burro salato e panna montata ai pepi e bacche tostate",
+   "Tartelletta Pera e Mandorla",
+   "Crema di mandorle e brunoise di pera cotta alla verbena",
+   "Mousse della Regina",
+   "Mousse al cioccolato senza zucchero, peperoncino d'Espelette, granella di cacao e briciole di crêpe"
+  ],
+  "pt": [
+   "A ementa",
+   "Idioma",
+   "Escolha o seu idioma",
+   "Tradução automática: em caso de dúvida, prevalece a versão francesa.",
+   "Alergia? Informe sempre o seu empregado antes de pedir.",
+   "Preço líquido, serviço incluído",
+   "Alergénios: em verificação pelo chef. Pergunte ao seu empregado.",
+   "Versão de teste: textos e alergénios em verificação pelo restaurante",
+   "Deixe-se tentar pelos nossos pratos feitos com produtos frescos e locais, cozinhados todos os dias com amor",
+   "Saladas",
+   "Salada à Moda de Sarlat",
+   "Foie gras meio-cozido em pano, peito de pato curado caseiro, tosta de queijo cabécou assado, salada mista, legumes em conserva, nozes, vinagrete de Monbazillac",
+   "Salada de Legumes",
+   "Salada mista, legumes da época assados, tosta com tapenade, nozes, vinagrete de mel",
+   "A Torre dos Senhores",
+   "Tábua de descoberta para 2 pessoas (ver quadro)",
+   "As tapas dos Companheiros",
+   "Para partilhar como aperitivo: ver o quadro",
+   "O banquete do escudeiro",
+   "Menu infantil (menores de 12 anos)",
+   "Tosta de rillettes de ganso",
+   "Filetes de frango panados",
+   "Puré do chef",
+   "Compota caseira",
+   "Menu Regresso do Campo",
+   "Entrada + Prato principal",
+   "Entrada + Prato principal + Sobremesa",
+   "Prato principal + Sobremesa",
+   "Entradas",
+   "Foie gras rústico",
+   "Foie gras IGP, meio-cozido em pano com Monbazillac, tostas e chutney do momento",
+   "Gaspacho ou sopa da estação",
+   "Sopa fria ou quente, conforme os legumes e as temperaturas da estação",
+   "Caldeirão Campestre",
+   "Ovo, crème fraîche de Isigny e cogumelos cultivados em « Campagne »",
+   "Pratos principais",
+   "Peito de Pato de Quinta Flamejado",
+   "Peito de pato servido rosado, molho encorpado, flamejado na hora (ou não) com « liqueur inconnue »",
+   "Peixe Inteiro Assado",
+   "Truta das águas do Inval, assada com risotto de espelta pequena, molho beurre blanc e óleo de ervas",
+   "Perna de Ganso Confitada",
+   "Perna de ganso de quinta confitada com óleo de alecrim",
+   "Entrecosto de Porco Gaulês",
+   "Entrecosto de porco de quinta cozinhado 8 horas a baixa temperatura numa marinada de mel, tomate e mostarda",
+   "*As nossas carnes são acompanhadas de legumes antigos, cozinhados e texturados ao sabor do chef",
+   "Sobremesas",
+   "Brioche Perdida",
+   "Servida com caramelo de manteiga salgada e chantilly com pimentas e bagas torradas",
+   "Tartelete de Pera e Amêndoa",
+   "Creme de amêndoa e brunoise de pera escalfada com verbena",
+   "Mousse da Rainha",
+   "Mousse de chocolate sem açúcar, pimenta de Espelette, nibs de cacau e lascas de crepe"
+  ],
+  "ru": [
+   "Меню",
+   "Язык",
+   "Выберите язык",
+   "Автоматический перевод: в случае сомнений действует французская версия.",
+   "Есть аллергия? Всегда сообщайте официанту перед заказом.",
+   "Цена нетто, обслуживание включено",
+   "Аллергены: проверяются шеф-поваром. Уточните у официанта.",
+   "Тестовая версия: тексты и аллергены проверяются рестораном",
+   "Побалуйте себя нашими блюдами из свежих местных продуктов, приготовленными каждый день с любовью",
+   "Салаты",
+   "Салат по-сарлатски",
+   "Фуа-гра, приготовленное в полотне, домашняя вяленая утиная грудка, тост с запечённым сыром кабеку, салатный микс, маринованные овощи, грецкие орехи, заправка с вином Монбазийак",
+   "Овощной салат",
+   "Салатный микс, запечённые сезонные овощи, тост с тапенадой, грецкие орехи, медовая заправка",
+   "Башня Сеньоров",
+   "Дегустационное блюдо на двоих (см. меловую доску)",
+   "Тапас Соратников",
+   "Для компании на аперитив: см. меловую доску",
+   "Пир оруженосца",
+   "Детское меню (до 12 лет)",
+   "Тост с гусиными рийетами",
+   "Куриное филе в панировке",
+   "Картофельное пюре от шефа",
+   "Домашнее фруктовое пюре",
+   "Меню «Возвращение из деревни»",
+   "Закуска + основное блюдо",
+   "Закуска + основное блюдо + десерт",
+   "Основное блюдо + десерт",
+   "Закуски",
+   "Деревенское фуа-гра",
+   "Фуа-гра (ЗГУ), полуготовое в полотне с вином Монбазийак, тосты и чатни момента",
+   "Гаспачо или суп сезона",
+   "Холодный или горячий суп — в зависимости от сезонных овощей и погоды",
+   "Деревенский котелок",
+   "Яйцо, крем-фреш из Исиньи и грибы, выращенные в « Campagne »",
+   "Основные блюда",
+   "Фермерская утиная грудка фламбе",
+   "Фермерская грудка средней прожарки, насыщенный соус, фламбируется при подаче (по желанию) с « liqueur inconnue »",
+   "Запечённая рыба целиком",
+   "Форель из вод Инваля, запечённая с ризотто из полбы, соус бёр-блан и травяное масло",
+   "Конфи из гусиной ножки",
+   "Фермерская гусиная ножка конфи с розмариновым маслом",
+   "Галльские свиные рёбрышки",
+   "Фермерские свиные рёбрышки, 8 часов при низкой температуре в маринаде из мёда, томата и горчицы",
+   "*Мясные блюда подаются со старинными сортами овощей, приготовленными по настроению шефа",
+   "Десерты",
+   "Потерянная бриошь",
+   "Подаётся с солёной карамелью и взбитыми сливками с обжаренным перцем и ягодами",
+   "Тарталетка с грушей и миндалём",
+   "Миндальный крем и кубики груши, припущенной с вербеной",
+   "Мусс Королевы",
+   "Шоколадный мусс без сахара, перец эспелет, какао-крупка и кусочки блинчиков"
+  ],
+  "zh": [
+   "菜单",
+   "语言",
+   "请选择语言",
+   "自动翻译：如有疑问，以法文版本为准。",
+   "如有过敏，点餐前请务必告知服务员。",
+   "净价，含服务费",
+   "过敏原：主厨正在核实，请询问服务员。",
+   "测试版：文字和过敏原信息正由餐厅核实",
+   "用新鲜本地食材、每天用心烹制的美食，请尽情享用",
+   "沙拉",
+   "萨尔拉沙拉",
+   "布包半熟鹅肝、自制风干鸭胸、烤卡贝库山羊奶酪吐司、混合生菜、腌制蔬菜、核桃、蒙巴兹亚克甜酒油醋汁",
+   "蔬菜沙拉",
+   "混合生菜、烤时令蔬菜、橄榄酱吐司、核桃、蜂蜜油醋汁",
+   "领主之塔",
+   "双人品鉴拼盘（详见黑板）",
+   "伙伴塔帕斯",
+   "适合开胃分享：请看黑板",
+   "侍从的盛宴",
+   "儿童套餐（12岁以下）",
+   "鹅肉酱吐司",
+   "炸鸡柳",
+   "主厨土豆泥",
+   "自制水果泥",
+   "乡野归来套餐",
+   "前菜 + 主菜",
+   "前菜 + 主菜 + 甜点",
+   "主菜 + 甜点",
+   "前菜",
+   "乡村鹅肝",
+   "地理标志鹅肝，以蒙巴兹亚克甜酒布包半熟，配吐司与当日酸辣酱",
+   "时令冷汤或热汤",
+   "依当季蔬菜与气温，冷食或热食",
+   "乡村炖锅",
+   "鸡蛋、伊西尼法式酸奶油与“Campagne”栽培蘑菇",
+   "主菜",
+   "火焰农场鸭胸",
+   "农场鸭胸粉嫩熟度，浓郁肉汁，可现场以“神秘利口酒”火焰烹制（也可不用）",
+   "整条烤鱼",
+   "因瓦尔水域鳟鱼，配小斯佩尔特小麦烩饭、白黄油酱与香草油",
+   "油封鹅腿",
+   "农场鹅腿油封，佐迷迭香油",
+   "高卢猪肋排",
+   "农场猪肋排以蜂蜜、番茄与芥末腌汁低温慢煮8小时",
+   "*肉类菜品搭配多种古老蔬菜，由主厨随心烹制",
+   "甜点",
+   "法式布里欧修吐司",
+   "佐咸黄油焦糖，以及烘焙胡椒与浆果风味的打发奶油",
+   "梨子杏仁挞",
+   "杏仁奶油与马鞭草水煮梨丁",
+   "王后慕斯",
+   "无糖巧克力慕斯，埃斯普莱特辣椒、可可碎与薄饼碎"
+  ],
+  "ja": [
+   "メニュー",
+   "言語",
+   "言語を選択してください",
+   "自動翻訳：不明な点はフランス語版が優先されます。",
+   "アレルギーのある方は、ご注文前に必ずスタッフにお伝えください。",
+   "表示価格はサービス料込みです",
+   "アレルゲン：シェフが確認中です。スタッフにお尋ねください。",
+   "テスト版：文章とアレルゲンはレストランが確認中です",
+   "新鮮な地元食材で毎日心を込めて作る料理をどうぞお楽しみください",
+   "サラダ",
+   "サルラ風サラダ",
+   "布で包んだセミキュイのフォアグラ、自家製鴨胸肉の生ハム、カベクーチーズのトースト、ミックスサラダ、野菜のピクルス、クルミ、モンバジヤックのビネグレット",
+   "野菜のサラダ",
+   "ミックスサラダ、季節野菜のロースト、タプナードのトースト、クルミ、ハニービネグレット",
+   "領主の塔",
+   "2名様用の発見プレート（黒板をご覧ください）",
+   "仲間たちのタパス",
+   "アペリティフにシェアして：黒板をご覧ください",
+   "従者の宴",
+   "お子様メニュー（12歳未満）",
+   "ガチョウのリエットのトースト",
+   "チキンフライ",
+   "シェフのマッシュポテト",
+   "自家製コンポート",
+   "田舎帰りのコース",
+   "前菜＋メイン",
+   "前菜＋メイン＋デザート",
+   "メイン＋デザート",
+   "前菜",
+   "田舎風フォアグラ",
+   "IGPフォアグラ、モンバジヤックで布包みセミキュイに、トーストと本日のチャツネ添え",
+   "ガスパチョまたは季節のスープ",
+   "季節の野菜と気温に合わせた冷製または温製スープ",
+   "田舎風の鍋",
+   "卵、イズニー産クレームフレッシュ、「Campagne」栽培のきのこ",
+   "メイン料理",
+   "農場鴨胸肉のフランベ",
+   "農場鴨胸肉をロゼに、濃厚なジュとともに。ご希望で「リキュール・アンコニュ」のフランベ",
+   "魚の丸ごとロースト",
+   "アンヴァルの水で育ったマスのロースト、スペルト小麦のリゾット、ブールブランソース、ハーブオイル",
+   "ガチョウもも肉のコンフィ",
+   "農場ガチョウのもも肉のコンフィ、ローズマリーオイル",
+   "ガリア風スペアリブ",
+   "農場豚のスペアリブを蜂蜜・トマト・マスタードのマリネで8時間低温調理",
+   "*肉料理には、シェフの気分で仕立てた古来種の野菜を添えます",
+   "デザート",
+   "ブリオッシュのフレンチトースト",
+   "塩バターキャラメルと、ローストした胡椒とベリーのホイップクリーム添え",
+   "洋梨とアーモンドのタルトレット",
+   "アーモンドクリームとヴェルヴェーヌで煮た洋梨のブリュノワーズ",
+   "王妃のムース",
+   "砂糖不使用のチョコレートムース、エスペレット唐辛子、カカオニブ、クレープのかけら"
+  ],
+  "hi": [
+   "मेन्यू",
+   "भाषा",
+   "अपनी भाषा चुनें",
+   "स्वचालित अनुवाद: संदेह होने पर फ़्रेंच संस्करण मान्य है।",
+   "एलर्जी है? ऑर्डर करने से पहले हमेशा अपने वेटर को बताएँ।",
+   "शुद्ध कीमत, सेवा शुल्क शामिल",
+   "एलर्जी कारक: शेफ़ द्वारा जाँच जारी है। कृपया अपने वेटर से पूछें।",
+   "परीक्षण संस्करण: पाठ और एलर्जी कारकों की जाँच रेस्टोरेंट कर रहा है",
+   "ताज़े, स्थानीय उत्पादों से रोज़ प्यार से बनाए गए हमारे व्यंजनों का आनंद लें",
+   "सलाद",
+   "सार्ला सलाद",
+   "कपड़े में आधा पका फ़ोई ग्रा, घर पर सुखाया बत्तख ब्रेस्ट, भुने काबेकू चीज़ का टोस्ट, मिक्स सलाद, अचारी सब्ज़ियाँ, अखरोट, मोंबाज़ियाक विनेग्रेट",
+   "सब्ज़ियों का सलाद",
+   "मिक्स सलाद, भुनी हुई मौसमी सब्ज़ियाँ, टपनाड वाला टोस्ट, अखरोट, शहद विनेग्रेट",
+   "सामंतों की मीनार",
+   "2 लोगों के लिए चखने की थाली (बोर्ड देखें)",
+   "साथियों के टापस",
+   "ऐपेटाइज़र के रूप में बाँटने के लिए: बोर्ड देखें",
+   "शस्त्रवाहक का भोज",
+   "बच्चों का मेन्यू (12 वर्ष से कम)",
+   "हंस रियेट टोस्ट",
+   "ब्रेडेड चिकन फ़िलेट",
+   "शेफ़ का मैश्ड आलू",
+   "घर का बना फल कॉम्पोट",
+   "गाँव से वापसी मेन्यू",
+   "स्टार्टर + मुख्य व्यंजन",
+   "स्टार्टर + मुख्य व्यंजन + मिठाई",
+   "मुख्य व्यंजन + मिठाई",
+   "स्टार्टर",
+   "देहाती फ़ोई ग्रा",
+   "IGP फ़ोई ग्रा, मोंबाज़ियाक के साथ कपड़े में आधा पका, टोस्ट और उस समय की चटनी",
+   "गाज़्पाचो या मौसमी सूप",
+   "मौसम की सब्ज़ियों और तापमान के अनुसार ठंडा या गर्म सूप",
+   "देहाती कड़ाही",
+   "अंडा, इज़िन्यी क्रीम फ़्रेश और « Campagne » में उगाए गए मशरूम",
+   "मुख्य व्यंजन",
+   "फ़्लैम्बे फ़ार्म बत्तख ब्रेस्ट",
+   "फ़ार्म बत्तख का ब्रेस्ट हल्का गुलाबी, गाढ़ा जूस, चाहें तो “लिकर अँकोनू” से फ़्लैम्बे",
+   "पूरी भुनी मछली",
+   "इनवाल के पानी की ट्राउट, छोटे स्पेल्ट के रिसोट्टो, बर ब्लां सॉस और हर्ब तेल के साथ भुनी",
+   "हंस की टांग का कॉन्फ़ी",
+   "फ़ार्म हंस की टांग कॉन्फ़ी, रोज़मेरी तेल के साथ",
+   "गॉलिक पोर्क रिब्स",
+   "फ़ार्म पोर्क रिब्स, शहद, टमाटर और सरसों की मैरिनेड में 8 घंटे धीमे तापमान पर पकी",
+   "*हमारे मांस व्यंजन पुरानी किस्म की सब्ज़ियों के साथ परोसे जाते हैं, शेफ़ के मिज़ाज के अनुसार पकाई गईं",
+   "मिठाइयाँ",
+   "ब्रियोश फ़्रेंच टोस्ट",
+   "नमकीन बटर कैरेमल और भुनी काली मिर्च व बेरीज़ वाली व्हिप्ड क्रीम के साथ",
+   "नाशपाती बादाम टार्टलेट",
+   "बादाम क्रीम और वरबेना में पकी नाशपाती की ब्रुनोआ",
+   "रानी का मूस",
+   "बिना चीनी का चॉकलेट मूस, एस्पेलेट मिर्च, कोको निब्स और क्रेप के टुकड़े"
+  ],
+  "ar": [
+   "قائمة الطعام",
+   "اللغة",
+   "اختر لغتك",
+   "ترجمة آلية: في حال الشك، تُعتمد النسخة الفرنسية.",
+   "هل لديك حساسية؟ أخبر النادل دائمًا قبل الطلب.",
+   "السعر صافٍ، الخدمة مشمولة",
+   "مسببات الحساسية: قيد التحقق من قبل الطاهي. يرجى سؤال النادل.",
+   "نسخة تجريبية: النصوص ومسببات الحساسية قيد التحقق من قبل المطعم",
+   "استمتعوا بأطباقنا المحضّرة من منتجات طازجة ومحلية، والمطهوة يوميًا بكل حب",
+   "السلطات",
+   "سلطة سارلا",
+   "فوا غرا نصف مطهو في قماش، صدر بط مجفف منزليًا، توست بجبن الكابيكو المحمّص، سلطة مشكلة، خضار مخللة، جوز، صلصة خل بنبيذ مونبازياك",
+   "سلطة الخضار",
+   "سلطة مشكلة، خضار موسمية مشوية، توست بالتابناد، جوز، صلصة الخل بالعسل",
+   "برج السادة",
+   "طبق اكتشاف لشخصين (انظر السبورة)",
+   "تاباس الرفاق",
+   "للمشاركة كمقبلات: انظر السبورة",
+   "وليمة حامل الدرع",
+   "قائمة الأطفال (أقل من 12 عامًا)",
+   "توست ريّيت الإوز",
+   "شرائح دجاج مقرمشة",
+   "بطاطس مهروسة على طريقة الطاهي",
+   "كومبوت فواكه منزلي",
+   "قائمة العودة من الريف",
+   "مقبلات + طبق رئيسي",
+   "مقبلات + طبق رئيسي + حلوى",
+   "طبق رئيسي + حلوى",
+   "المقبلات",
+   "فوا غرا ريفي",
+   "فوا غرا بمؤشر جغرافي محمي، نصف مطهو في قماش مع مونبازياك، توست وتشاتني اللحظة",
+   "غازباتشو أو حساء الموسم",
+   "حساء بارد أو ساخن حسب خضار الموسم ودرجات الحرارة",
+   "قِدر الريف",
+   "بيض، كريمة طازجة من إيزيني وفطر مزروع في « Campagne »",
+   "الأطباق الرئيسية",
+   "صدر بط المزرعة المشتعل",
+   "صدر بط من المزرعة مطهو باعتدال، صلصة غنية، يُشعل عند التقديم (أو لا) بـ« ليكور أنكونو »",
+   "سمكة كاملة مشوية",
+   "سمك تراوت من مياه إنفال، مشوي مع ريزوتو القمح الأحادي، صلصة الزبدة البيضاء وزيت الأعشاب",
+   "فخذ إوز كونفي",
+   "فخذ إوز من المزرعة كونفي مع زيت إكليل الجبل",
+   "أضلاع خنزير غالية",
+   "أضلاع خنزير من المزرعة مطهوة 8 ساعات على حرارة منخفضة في تتبيلة عسل وطماطم وخردل",
+   "*تُقدَّم لحومنا مع خضار قديمة الأصناف، محضّرة حسب مزاج الطاهي",
+   "الحلويات",
+   "بريوش محمّصة",
+   "تُقدَّم مع كراميل الزبدة المملحة وكريمة مخفوقة بالفلفل المحمص والتوت",
+   "تارتليت الكمثرى واللوز",
+   "كريمة اللوز ومكعبات كمثرى مطهوة بالفيربينا",
+   "موس الملكة",
+   "موس شوكولاتة بدون سكر، فلفل إسبليت، حبيبات كاكاو وقطع كريب"
+  ],
+  "bn": [
+   "মেনু",
+   "ভাষা",
+   "আপনার ভাষা বেছে নিন",
+   "স্বয়ংক্রিয় অনুবাদ: সন্দেহ হলে ফরাসি সংস্করণই প্রযোজ্য।",
+   "অ্যালার্জি আছে? অর্ডার দেওয়ার আগে সবসময় আপনার ওয়েটারকে জানান।",
+   "নিট মূল্য, সার্ভিস অন্তর্ভুক্ত",
+   "অ্যালার্জেন: শেফ যাচাই করছেন। অনুগ্রহ করে ওয়েটারকে জিজ্ঞাসা করুন।",
+   "পরীক্ষামূলক সংস্করণ: লেখা ও অ্যালার্জেন রেস্তোরাঁ যাচাই করছে",
+   "তাজা, স্থানীয় উপকরণে প্রতিদিন ভালোবাসা দিয়ে রান্না করা আমাদের খাবার উপভোগ করুন",
+   "সালাদ",
+   "সারলা সালাদ",
+   "কাপড়ে মোড়ানো আধা-সেদ্ধ ফোয়া গ্রা, ঘরে শুকানো হাঁসের বুকের মাংস, কাবেকু চিজ টোস্ট, মিশ্র সালাদ, আচারি সবজি, আখরোট, মোঁবাজিয়াক ভিনেগ্রেট",
+   "সবজির সালাদ",
+   "মিশ্র সালাদ, মৌসুমি সবজি রোস্ট, টাপেনাড টোস্ট, আখরোট, মধুর ভিনেগ্রেট",
+   "প্রভুদের মিনার",
+   "দুজনের জন্য স্বাদ-থালা (বোর্ড দেখুন)",
+   "সঙ্গীদের টাপাস",
+   "অ্যাপেটাইজার হিসেবে ভাগ করে খাওয়ার জন্য: বোর্ড দেখুন",
+   "অনুচরের ভোজ",
+   "শিশুদের মেনু (১২ বছরের কম)",
+   "রাজহাঁসের রিয়েট টোস্ট",
+   "ব্রেডেড চিকেন ফিলে",
+   "শেফের ম্যাশড আলু",
+   "ঘরে তৈরি ফলের কমপোট",
+   "গ্রাম থেকে ফেরা মেনু",
+   "স্টার্টার + প্রধান খাবার",
+   "স্টার্টার + প্রধান খাবার + ডেজার্ট",
+   "প্রধান খাবার + ডেজার্ট",
+   "স্টার্টার",
+   "গ্রাম্য ফোয়া গ্রা",
+   "IGP ফোয়া গ্রা, মোঁবাজিয়াক দিয়ে কাপড়ে আধা-সেদ্ধ, টোস্ট ও সেই মুহূর্তের চাটনি",
+   "গাজপাচো বা মৌসুমি স্যুপ",
+   "মৌসুমের সবজি ও তাপমাত্রা অনুযায়ী ঠান্ডা বা গরম স্যুপ",
+   "গ্রাম্য কড়াই",
+   "ডিম, ইজিনি ক্রিম ফ্রেশ ও « Campagne »-এ চাষ করা মাশরুম",
+   "প্রধান খাবার",
+   "ফ্লাম্বে খামারের হাঁসের বুক",
+   "খামারের হাঁসের বুক হালকা গোলাপি, ঘন জুস, চাইলে “লিকর অঁকোনু” দিয়ে ফ্লাম্বে",
+   "আস্ত রোস্ট মাছ",
+   "ইনভালের জলের ট্রাউট, স্পেল্ট গমের রিসোটো, বার ব্লাঁ সস ও ভেষজ তেলসহ রোস্ট",
+   "রাজহাঁসের পায়ের কনফি",
+   "খামারের রাজহাঁসের পা কনফি, রোজমেরি তেলসহ",
+   "গলিক শূকরের পাঁজর",
+   "খামারের শূকরের পাঁজর মধু, টমেটো ও সরিষার মেরিনেডে ৮ ঘণ্টা কম তাপে রান্না",
+   "*আমাদের মাংসের সাথে থাকে পুরনো জাতের সবজি, শেফের মেজাজ অনুযায়ী রান্না",
+   "ডেজার্ট",
+   "ব্রিওশ ফ্রেঞ্চ টোস্ট",
+   "লবণাক্ত মাখন ক্যারামেল ও ভাজা গোলমরিচ-বেরির হুইপড ক্রিমসহ",
+   "নাশপাতি-আমন্ড টার্টলেট",
+   "আমন্ড ক্রিম ও ভারবেনায় সেদ্ধ নাশপাতির কুচি",
+   "রানির মুস",
+   "চিনি ছাড়া চকোলেট মুস, এসপেলেট মরিচ, কোকো নিবস ও ক্রেপের টুকরো"
+  ],
+  "id": [
+   "Menu",
+   "Bahasa",
+   "Pilih bahasa Anda",
+   "Terjemahan otomatis: jika ragu, versi bahasa Prancis yang berlaku.",
+   "Punya alergi? Selalu beri tahu pelayan sebelum memesan.",
+   "Harga bersih, termasuk layanan",
+   "Alergen: sedang diperiksa oleh koki. Silakan tanyakan kepada pelayan.",
+   "Versi uji coba: teks dan alergen sedang diperiksa oleh restoran",
+   "Nikmati hidangan kami dari bahan segar dan lokal, dimasak setiap hari dengan cinta",
+   "Salad",
+   "Salad Sarlat",
+   "Foie gras setengah matang dalam kain, dada bebek kering buatan sendiri, roti panggang keju cabécou, selada campur, acar sayuran, kenari, vinaigrette Monbazillac",
+   "Salad Sayuran",
+   "Selada campur, sayuran musiman panggang, roti panggang dengan tapenade, kenari, vinaigrette madu",
+   "Menara Para Tuan",
+   "Papan cicip untuk 2 orang (lihat papan tulis)",
+   "Tapas para Sahabat",
+   "Untuk berbagi sebagai hidangan pembuka: lihat papan tulis",
+   "Pesta sang Pengawal",
+   "Menu anak (di bawah 12 tahun)",
+   "Roti panggang rillettes angsa",
+   "Fillet ayam goreng tepung",
+   "Kentang tumbuk ala koki",
+   "Kompot buah buatan sendiri",
+   "Menu Pulang dari Desa",
+   "Hidangan pembuka + Hidangan utama",
+   "Hidangan pembuka + Hidangan utama + Hidangan penutup",
+   "Hidangan utama + Hidangan penutup",
+   "Hidangan pembuka",
+   "Foie gras rustik",
+   "Foie gras IGP, setengah matang dalam kain dengan Monbazillac, roti panggang dan chutney saat ini",
+   "Gazpacho atau sup musiman",
+   "Sup dingin atau hangat sesuai sayuran dan suhu musim",
+   "Kuali Pedesaan",
+   "Telur, crème fraîche Isigny, dan jamur yang dibudidayakan di « Campagne »",
+   "Hidangan utama",
+   "Dada Bebek Peternakan Flambé",
+   "Dada bebek disajikan medium, jus pekat, di-flambé saat disajikan (atau tidak) dengan « liqueur inconnue »",
+   "Ikan Utuh Panggang",
+   "Ikan trout dari perairan Inval, dipanggang dengan risotto einkorn, saus beurre blanc, dan minyak herba",
+   "Confit Paha Angsa",
+   "Paha angsa peternakan confit dengan minyak rosemary",
+   "Iga Babi ala Galia",
+   "Iga babi peternakan dimasak 8 jam suhu rendah dalam marinasi madu, tomat, dan mustar",
+   "*Hidangan daging kami disertai aneka sayuran kuno, dimasak sesuai suasana hati koki",
+   "Hidangan penutup",
+   "Roti Brioche Panggang",
+   "Disajikan dengan karamel mentega asin dan krim kocok berlada panggang dan beri",
+   "Tartlet Pir dan Almond",
+   "Krim almond dan potongan pir rebus verbena",
+   "Mousse Sang Ratu",
+   "Mousse cokelat tanpa gula, cabai Espelette, cacao nibs, dan serpihan crêpe"
+  ],
+  "ur": [
+   "مینو",
+   "زبان",
+   "اپنی زبان منتخب کریں",
+   "خودکار ترجمہ: شک کی صورت میں فرانسیسی نسخہ معتبر ہے۔",
+   "الرجی ہے؟ آرڈر دینے سے پہلے ہمیشہ اپنے ویٹر کو بتائیں۔",
+   "خالص قیمت، سروس شامل",
+   "الرجی عناصر: شیف تصدیق کر رہے ہیں۔ براہ کرم اپنے ویٹر سے پوچھیں۔",
+   "آزمائشی نسخہ: متن اور الرجی عناصر کی تصدیق ریستوران کر رہا ہے",
+   "تازہ، مقامی اجزاء سے روزانہ محبت کے ساتھ تیار کیے گئے ہمارے کھانوں سے لطف اٹھائیں",
+   "سلاد",
+   "سارلا سلاد",
+   "کپڑے میں آدھا پکا فوا گرا، گھر کا خشک کیا ہوا بطخ کا سینہ، بھنے کابیکو پنیر کا ٹوسٹ، ملا جلا سلاد، اچار والی سبزیاں، اخروٹ، مونبازیاک وینیگریٹ",
+   "سبزیوں کا سلاد",
+   "ملا جلا سلاد، بھنی ہوئی موسمی سبزیاں، ٹپناڈ ٹوسٹ، اخروٹ، شہد کی وینیگریٹ",
+   "سرداروں کا مینار",
+   "دو افراد کے لیے چکھنے کی پلیٹ (تختہ دیکھیں)",
+   "ساتھیوں کے ٹاپس",
+   "بطور ایپیٹائزر بانٹنے کے لیے: تختہ دیکھیں",
+   "شہسوار کے خادم کی ضیافت",
+   "بچوں کا مینو (12 سال سے کم)",
+   "ہنس کے ریئٹ ٹوسٹ",
+   "بریڈڈ چکن فلے",
+   "شیف کے میش کیے ہوئے آلو",
+   "گھر کا بنا پھلوں کا کمپوٹ",
+   "دیہات سے واپسی کا مینو",
+   "ابتدائی کھانا + اہم کھانا",
+   "ابتدائی کھانا + اہم کھانا + میٹھا",
+   "اہم کھانا + میٹھا",
+   "ابتدائی کھانے",
+   "دیہاتی فوا گرا",
+   "IGP فوا گرا، مونبازیاک کے ساتھ کپڑے میں آدھا پکا، ٹوسٹ اور اُس وقت کی چٹنی",
+   "گازپاچو یا موسمی سوپ",
+   "موسم کی سبزیوں اور درجہ حرارت کے مطابق ٹھنڈا یا گرم سوپ",
+   "دیہاتی دیگچی",
+   "انڈا، ایزینی کریم فریش اور « Campagne » میں اُگائے گئے مشروم",
+   "اہم کھانے",
+   "فلیمبے فارم بطخ کا سینہ",
+   "فارم بطخ کا سینہ ہلکا گلابی، گاڑھا جوس، خواہش پر “لیکر انکونو” سے فلیمبے",
+   "پوری بھنی ہوئی مچھلی",
+   "انوال کے پانی کی ٹراؤٹ، اسپیلٹ کے ریسوٹو، بر بلاں ساس اور ہربز کے تیل کے ساتھ بھنی",
+   "ہنس کی ران کا کونفی",
+   "فارم ہنس کی ران کونفی، روزمیری تیل کے ساتھ",
+   "گالک سور کی پسلیاں",
+   "فارم سور کی پسلیاں شہد، ٹماٹر اور رائی کی میرینیڈ میں 8 گھنٹے کم درجہ حرارت پر پکی",
+   "*ہمارے گوشت کے کھانوں کے ساتھ پرانی اقسام کی سبزیاں شیف کے موڈ کے مطابق پکا کر پیش کی جاتی ہیں",
+   "میٹھے",
+   "بریوش فرنچ ٹوسٹ",
+   "نمکین مکھن کیریمل اور بھنی کالی مرچ و بیریز والی پھینٹی کریم کے ساتھ",
+   "ناشپاتی بادام ٹارٹ",
+   "بادام کریم اور وربینا میں پکی ناشپاتی کے باریک ٹکڑے",
+   "ملکہ کا موس",
+   "بغیر چینی کا چاکلیٹ موس، ایسپیلیٹ مرچ، کوکو نبز اور کریپ کے ٹکڑے"
+  ]
+ },
+ "sections": [
+  {
+   "id": "salades",
+   "titre": "salades",
+   "plats": [
+    [
+     "s1",
+     24
+    ],
+    [
+     "s2",
+     16
+    ],
+    [
+     "s3",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "tapas",
+   "type": "encart",
+   "titre": "tapas",
+   "texte": "tapasTexte"
+  },
+  {
+   "id": "formules",
+   "type": "formules",
+   "titre": "formules",
+   "lignes": [
+    [
+     "f1",
+     32
+    ],
+    [
+     "f2",
+     39
+    ],
+    [
+     "f3",
+     28
+    ]
+   ]
+  },
+  {
+   "id": "entrees",
+   "titre": "entrees",
+   "prix": 14,
+   "plats": [
+    [
+     "e1",
+     null,
+     4
+    ],
+    [
+     "e2"
+    ],
+    [
+     "e3"
+    ]
+   ]
+  },
+  {
+   "id": "plats",
+   "titre": "plats",
+   "prix": 22,
+   "plats": [
+    [
+     "p1"
+    ],
+    [
+     "p2"
+    ],
+    [
+     "p3"
+    ],
+    [
+     "p4"
+    ]
+   ],
+   "note": "noteViandes"
+  },
+  {
+   "id": "desserts",
+   "titre": "desserts",
+   "prix": 8,
+   "plats": [
+    [
+     "d1"
+    ],
+    [
+     "d2"
+    ],
+    [
+     "d3",
+     null,
+     1
+    ]
+   ]
+  },
+  {
+   "id": "ecuyer",
+   "type": "enfant",
+   "titre": "ecuyer",
+   "sousTitre": "enfant",
+   "prix": 14,
+   "items": [
+    "k1",
+    "k2",
+    "k3",
+    "k4"
+   ]
+  }
+ ],
+ "allergenes": {
+  "fr": [
+   "Gluten",
+   "Crustacés",
+   "Œufs",
+   "Poissons",
+   "Arachides",
+   "Soja",
+   "Lait",
+   "Fruits à coque",
+   "Céleri",
+   "Moutarde",
+   "Sésame",
+   "Sulfites",
+   "Lupin",
+   "Mollusques"
+  ],
+  "en": [
+   "Gluten",
+   "Crustaceans",
+   "Eggs",
+   "Fish",
+   "Peanuts",
+   "Soy",
+   "Milk",
+   "Tree nuts",
+   "Celery",
+   "Mustard",
+   "Sesame",
+   "Sulphites",
+   "Lupin",
+   "Molluscs"
+  ],
+  "zh": [
+   "麸质",
+   "甲壳类",
+   "蛋类",
+   "鱼类",
+   "花生",
+   "大豆",
+   "乳制品",
+   "坚果",
+   "芹菜",
+   "芥末",
+   "芝麻",
+   "亚硫酸盐",
+   "羽扇豆",
+   "软体动物"
+  ],
+  "hi": [
+   "ग्लूटेन",
+   "क्रस्टेशियन (झींगा, केकड़ा)",
+   "अंडे",
+   "मछली",
+   "मूंगफली",
+   "सोया",
+   "दूध",
+   "मेवे",
+   "सेलरी",
+   "सरसों",
+   "तिल",
+   "सल्फाइट",
+   "ल्यूपिन",
+   "मोलस्क (सीप, घोंघा)"
+  ],
+  "es": [
+   "Gluten",
+   "Crustáceos",
+   "Huevos",
+   "Pescado",
+   "Cacahuetes",
+   "Soja",
+   "Leche",
+   "Frutos de cáscara",
+   "Apio",
+   "Mostaza",
+   "Sésamo",
+   "Sulfitos",
+   "Altramuces",
+   "Moluscos"
+  ],
+  "ar": [
+   "الغلوتين",
+   "القشريات",
+   "البيض",
+   "السمك",
+   "الفول السوداني",
+   "الصويا",
+   "الحليب",
+   "المكسرات",
+   "الكرفس",
+   "الخردل",
+   "السمسم",
+   "الكبريتيت",
+   "الترمس",
+   "الرخويات"
+  ],
+  "bn": [
+   "গ্লুটেন",
+   "খোলসযুক্ত প্রাণী (চিংড়ি, কাঁকড়া)",
+   "ডিম",
+   "মাছ",
+   "চিনাবাদাম",
+   "সয়া",
+   "দুধ",
+   "বাদাম",
+   "সেলারি",
+   "সরিষা",
+   "তিল",
+   "সালফাইট",
+   "লুপিন",
+   "শামুক ও ঝিনুক"
+  ],
+  "pt": [
+   "Glúten",
+   "Crustáceos",
+   "Ovos",
+   "Peixe",
+   "Amendoins",
+   "Soja",
+   "Leite",
+   "Frutos de casca rija",
+   "Aipo",
+   "Mostarda",
+   "Sésamo",
+   "Sulfitos",
+   "Tremoço",
+   "Moluscos"
+  ],
+  "ru": [
+   "Глютен",
+   "Ракообразные",
+   "Яйца",
+   "Рыба",
+   "Арахис",
+   "Соя",
+   "Молоко",
+   "Орехи",
+   "Сельдерей",
+   "Горчица",
+   "Кунжут",
+   "Сульфиты",
+   "Люпин",
+   "Моллюски"
+  ],
+  "id": [
+   "Gluten",
+   "Krustasea",
+   "Telur",
+   "Ikan",
+   "Kacang tanah",
+   "Kedelai",
+   "Susu",
+   "Kacang pohon",
+   "Seledri",
+   "Mustar",
+   "Wijen",
+   "Sulfit",
+   "Lupin",
+   "Moluska"
+  ],
+  "ur": [
+   "گلوٹین",
+   "جھینگا اور کیکڑا",
+   "انڈے",
+   "مچھلی",
+   "مونگ پھلی",
+   "سویا",
+   "دودھ",
+   "گری دار میوے",
+   "سیلری",
+   "رائی (مسٹرڈ)",
+   "تل",
+   "سلفائٹس",
+   "لیوپن",
+   "سیپیاں اور گھونگھے"
+  ],
+  "de": [
+   "Gluten",
+   "Krebstiere",
+   "Eier",
+   "Fisch",
+   "Erdnüsse",
+   "Soja",
+   "Milch",
+   "Schalenfrüchte",
+   "Sellerie",
+   "Senf",
+   "Sesam",
+   "Sulfite",
+   "Lupinen",
+   "Weichtiere"
+  ],
+  "ja": [
+   "グルテン",
+   "甲殻類",
+   "卵",
+   "魚",
+   "落花生",
+   "大豆",
+   "乳",
+   "ナッツ類",
+   "セロリ",
+   "マスタード",
+   "ごま",
+   "亜硫酸塩",
+   "ルピナス",
+   "軟体動物"
+  ],
+  "nl": [
+   "Gluten",
+   "Schaaldieren",
+   "Eieren",
+   "Vis",
+   "Pinda's",
+   "Soja",
+   "Melk",
+   "Noten",
+   "Selderij",
+   "Mosterd",
+   "Sesamzaad",
+   "Sulfieten",
+   "Lupine",
+   "Weekdieren"
+  ],
+  "it": [
+   "Glutine",
+   "Crostacei",
+   "Uova",
+   "Pesce",
+   "Arachidi",
+   "Soia",
+   "Latte",
+   "Frutta a guscio",
+   "Sedano",
+   "Senape",
+   "Sesamo",
+   "Solfiti",
+   "Lupini",
+   "Molluschi"
+  ]
+ },
+ "plus": {
+  "fr": {
+   "allergies": "Liste des allergènes",
+   "filtreTitre": "Je suis allergique à :",
+   "effacer": "Tout effacer",
+   "voir": "Voir la carte",
+   "contient": "Contient",
+   "alerte": "Contient un de vos allergènes",
+   "compatibles": "Plats sans vos allergènes : {n}",
+   "legende": "Les 14 allergènes majeurs",
+   "exemple": "Allergènes communiqués et validés par le restaurant. En cas d'allergie, prévenez toujours votre serveur avant de commander.",
+   "boutonEnfant": "Menu enfant",
+   "retirable": "* Peut être retiré du plat : demandez à votre serveur.",
+   "aucun": "Aucun des 14 allergènes majeurs"
+  },
+  "en": {
+   "allergies": "Allergen list",
+   "filtreTitre": "I am allergic to:",
+   "effacer": "Clear all",
+   "voir": "Show the menu",
+   "contient": "Contains",
+   "alerte": "Contains one of your allergens",
+   "compatibles": "Dishes without your allergens: {n}",
+   "legende": "The 14 major allergens",
+   "exemple": "Allergens declared and approved by the restaurant. If you have an allergy, always tell your server before ordering.",
+   "boutonEnfant": "Kids' menu",
+   "retirable": "* Can be left out of the dish: just ask your server.",
+   "aucun": "None of the 14 major allergens"
+  },
+  "zh": {
+   "allergies": "过敏原列表",
+   "filtreTitre": "我对以下过敏：",
+   "effacer": "全部清除",
+   "voir": "查看菜单",
+   "contient": "含有",
+   "alerte": "含有您的过敏原",
+   "compatibles": "不含您过敏原的菜品：{n}",
+   "legende": "14种主要过敏原",
+   "exemple": "过敏原信息由餐厅提供并确认。如有过敏，请在点餐前务必告知服务员。",
+   "boutonEnfant": "儿童套餐",
+   "retirable": "* 可从菜品中去除，请告知服务员。",
+   "aucun": "不含 14 种主要过敏原"
+  },
+  "hi": {
+   "allergies": "एलर्जी कारकों की सूची",
+   "filtreTitre": "मुझे इनसे एलर्जी है:",
+   "effacer": "सब हटाएँ",
+   "voir": "मेन्यू देखें",
+   "contient": "इसमें है",
+   "alerte": "इसमें आपका एलर्जी कारक है",
+   "compatibles": "आपके एलर्जी कारकों के बिना व्यंजन: {n}",
+   "legende": "14 मुख्य एलर्जी कारक",
+   "exemple": "एलर्जी कारक रेस्तराँ द्वारा घोषित और सत्यापित। एलर्जी होने पर ऑर्डर से पहले वेटर को अवश्य बताएँ।",
+   "boutonEnfant": "बच्चों का मेन्यू",
+   "retirable": "* इसे व्यंजन से हटाया जा सकता है: अपने वेटर से कहें।",
+   "aucun": "14 प्रमुख एलर्जी कारकों में से कोई नहीं"
+  },
+  "es": {
+   "allergies": "Lista de alérgenos",
+   "filtreTitre": "Soy alérgico/a a:",
+   "effacer": "Borrar todo",
+   "voir": "Ver la carta",
+   "contient": "Contiene",
+   "alerte": "Contiene uno de sus alérgenos",
+   "compatibles": "Platos sin sus alérgenos: {n}",
+   "legende": "Los 14 alérgenos principales",
+   "exemple": "Alérgenos declarados y validados por el restaurante. Si tiene alergia, avise siempre a su camarero antes de pedir.",
+   "boutonEnfant": "Menú infantil",
+   "retirable": "* Se puede retirar del plato: pregunte a su camarero.",
+   "aucun": "Ninguno de los 14 alérgenos principales"
+  },
+  "ar": {
+   "allergies": "قائمة مسببات الحساسية",
+   "filtreTitre": "لدي حساسية من:",
+   "effacer": "مسح الكل",
+   "voir": "عرض القائمة",
+   "contient": "يحتوي على",
+   "alerte": "يحتوي على أحد مسببات الحساسية لديك",
+   "compatibles": "أطباق خالية من مسببات الحساسية لديك: {n}",
+   "legende": "مسببات الحساسية الرئيسية الأربعة عشر",
+   "exemple": "مسببات الحساسية معلنة ومعتمدة من المطعم. إن كانت لديك حساسية، أخبر النادل دائمًا قبل الطلب.",
+   "boutonEnfant": "قائمة الأطفال",
+   "retirable": "* يمكن إزالته من الطبق: اطلب ذلك من النادل.",
+   "aucun": "لا يحتوي على أي من مسببات الحساسية الأربعة عشر"
+  },
+  "bn": {
+   "allergies": "অ্যালার্জেনের তালিকা",
+   "filtreTitre": "আমার এগুলোতে অ্যালার্জি আছে:",
+   "effacer": "সব মুছুন",
+   "voir": "মেনু দেখুন",
+   "contient": "রয়েছে",
+   "alerte": "আপনার একটি অ্যালার্জেন রয়েছে",
+   "compatibles": "আপনার অ্যালার্জেন ছাড়া খাবার: {n}",
+   "legende": "১৪টি প্রধান অ্যালার্জেন",
+   "exemple": "অ্যালার্জেন তথ্য রেস্তোরাঁ কর্তৃক ঘোষিত ও যাচাইকৃত। অ্যালার্জি থাকলে অর্ডারের আগে অবশ্যই ওয়েটারকে জানান।",
+   "boutonEnfant": "শিশুদের মেনু",
+   "retirable": "* খাবার থেকে বাদ দেওয়া যায়: ওয়েটারকে বলুন।",
+   "aucun": "১৪টি প্রধান অ্যালার্জেনের কোনোটিই নেই"
+  },
+  "pt": {
+   "allergies": "Lista de alergénios",
+   "filtreTitre": "Sou alérgico/a a:",
+   "effacer": "Limpar tudo",
+   "voir": "Ver a ementa",
+   "contient": "Contém",
+   "alerte": "Contém um dos seus alergénios",
+   "compatibles": "Pratos sem os seus alergénios: {n}",
+   "legende": "Os 14 alergénios principais",
+   "exemple": "Alergénios declarados e validados pelo restaurante. Em caso de alergia, informe sempre o seu empregado antes de pedir.",
+   "boutonEnfant": "Menu infantil",
+   "retirable": "* Pode ser retirado do prato: pergunte ao seu empregado.",
+   "aucun": "Nenhum dos 14 alergénios principais"
+  },
+  "ru": {
+   "allergies": "Список аллергенов",
+   "filtreTitre": "У меня аллергия на:",
+   "effacer": "Очистить всё",
+   "voir": "Смотреть меню",
+   "contient": "Содержит",
+   "alerte": "Содержит ваш аллерген",
+   "compatibles": "Блюда без ваших аллергенов: {n}",
+   "legende": "14 основных аллергенов",
+   "exemple": "Аллергены заявлены и подтверждены рестораном. При аллергии обязательно сообщите официанту до заказа.",
+   "boutonEnfant": "Детское меню",
+   "retirable": "* Можно исключить из блюда: спросите официанта.",
+   "aucun": "Не содержит ни одного из 14 основных аллергенов"
+  },
+  "id": {
+   "allergies": "Daftar alergen",
+   "filtreTitre": "Saya alergi terhadap:",
+   "effacer": "Hapus semua",
+   "voir": "Lihat menu",
+   "contient": "Mengandung",
+   "alerte": "Mengandung salah satu alergen Anda",
+   "compatibles": "Hidangan tanpa alergen Anda: {n}",
+   "legende": "14 alergen utama",
+   "exemple": "Alergen dinyatakan dan divalidasi oleh restoran. Jika Anda alergi, selalu beri tahu pelayan sebelum memesan.",
+   "boutonEnfant": "Menu anak",
+   "retirable": "* Bisa dihilangkan dari hidangan: tanyakan kepada pelayan.",
+   "aucun": "Tidak mengandung satu pun dari 14 alergen utama"
+  },
+  "ur": {
+   "allergies": "الرجی عناصر کی فہرست",
+   "filtreTitre": "مجھے ان سے الرجی ہے:",
+   "effacer": "سب صاف کریں",
+   "voir": "مینو دیکھیں",
+   "contient": "شامل ہے",
+   "alerte": "اس میں آپ کا الرجی عنصر شامل ہے",
+   "compatibles": "آپ کے الرجی عناصر کے بغیر کھانے: {n}",
+   "legende": "14 بڑے الرجی عناصر",
+   "exemple": "الرجی عناصر ریستوران کی طرف سے بتائے اور تصدیق شدہ ہیں۔ الرجی ہو تو آرڈر سے پہلے ویٹر کو ضرور بتائیں۔",
+   "boutonEnfant": "بچوں کا مینو",
+   "retirable": "* اسے کھانے سے نکالا جا سکتا ہے: ویٹر سے کہیں۔",
+   "aucun": "14 بڑے الرجی عناصر میں سے کوئی نہیں"
+  },
+  "de": {
+   "allergies": "Allergenliste",
+   "filtreTitre": "Ich bin allergisch gegen:",
+   "effacer": "Alles löschen",
+   "voir": "Zur Speisekarte",
+   "contient": "Enthält",
+   "alerte": "Enthält eines Ihrer Allergene",
+   "compatibles": "Gerichte ohne Ihre Allergene: {n}",
+   "legende": "Die 14 Hauptallergene",
+   "exemple": "Allergene vom Restaurant angegeben und bestätigt. Bei Allergien informieren Sie bitte immer vor der Bestellung die Bedienung.",
+   "boutonEnfant": "Kindermenü",
+   "retirable": "* Kann weggelassen werden: fragen Sie Ihre Bedienung.",
+   "aucun": "Keines der 14 Hauptallergene"
+  },
+  "ja": {
+   "allergies": "アレルゲン一覧",
+   "filtreTitre": "アレルギーがあるもの：",
+   "effacer": "すべてクリア",
+   "voir": "メニューを見る",
+   "contient": "含む",
+   "alerte": "あなたのアレルゲンを含みます",
+   "compatibles": "アレルゲンを含まない料理：{n}品",
+   "legende": "主要14品目のアレルゲン",
+   "exemple": "アレルゲンはレストランが申告・確認したものです。アレルギーのある方はご注文前に必ずスタッフにお伝えください。",
+   "boutonEnfant": "お子様メニュー",
+   "retirable": "* お料理から外せます。スタッフにお申し付けください。",
+   "aucun": "14大アレルゲンは含みません"
+  },
+  "nl": {
+   "allergies": "Allergenenlijst",
+   "filtreTitre": "Ik ben allergisch voor:",
+   "effacer": "Alles wissen",
+   "voir": "Bekijk de kaart",
+   "contient": "Bevat",
+   "alerte": "Bevat een van uw allergenen",
+   "compatibles": "Gerechten zonder uw allergenen: {n}",
+   "legende": "De 14 belangrijkste allergenen",
+   "exemple": "Allergenen opgegeven en bevestigd door het restaurant. Meld een allergie altijd aan uw ober vóór het bestellen.",
+   "boutonEnfant": "Kindermenu",
+   "retirable": "* Kan uit het gerecht worden weggelaten: vraag het uw ober.",
+   "aucun": "Geen van de 14 belangrijkste allergenen"
+  },
+  "it": {
+   "allergies": "Elenco allergeni",
+   "filtreTitre": "Sono allergico/a a:",
+   "effacer": "Cancella tutto",
+   "voir": "Vedi il menù",
+   "contient": "Contiene",
+   "alerte": "Contiene uno dei tuoi allergeni",
+   "compatibles": "Piatti senza i tuoi allergeni: {n}",
+   "legende": "I 14 allergeni principali",
+   "exemple": "Allergeni dichiarati e validati dal ristorante. In caso di allergia, avvisa sempre il cameriere prima di ordinare.",
+   "boutonEnfant": "Menù bambini",
+   "retirable": "* Può essere tolto dal piatto: chiedi al cameriere.",
+   "aucun": "Nessuno dei 14 allergeni principali"
+  }
+ },
+ "retirables": {
+  "s1": [
+   1,
+   3,
+   7,
+   8,
+   10
+  ],
+  "s2": [
+   1,
+   3,
+   8,
+   10
+  ],
+  "e3": [
+   3
+  ],
+  "p1": [
+   7,
+   9
+  ],
+  "p2": [
+   1,
+   7,
+   12
+  ],
+  "p3": [
+   7,
+   9
+  ],
+  "p4": [
+   7,
+   9
+  ],
+  "d3": [
+   1,
+   7
+  ],
+  "ecuyer": [
+   5,
+   8
+  ]
+ },
+ "allergenesParPlat": {
+  "s1": [
+   1,
+   3,
+   7,
+   8,
+   10
+  ],
+  "s2": [
+   1,
+   3,
+   8,
+   10
+  ],
+  "e2": [
+   1,
+   3
+  ],
+  "e3": [
+   3,
+   7,
+   12
+  ],
+  "p1": [
+   7,
+   9
+  ],
+  "p2": [
+   1,
+   4,
+   7,
+   12
+  ],
+  "p3": [
+   7,
+   9
+  ],
+  "p4": [
+   7,
+   9,
+   10,
+   12
+  ],
+  "d1": [
+   1,
+   3,
+   7
+  ],
+  "d2": [
+   1,
+   3,
+   7,
+   8
+  ],
+  "d3": [
+   1,
+   3,
+   7
+  ],
+  "ecuyer": [
+   5,
+   8
+  ],
+  "e1": []
+ },
+ "nonValides": [
+  "s3"
+ ]
+};
+if (typeof module !== "undefined") module.exports = MENU_DATA;
+
+;
+var MENU_CORE = (function () {
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+  function t(D, lg, cle) {
+    var i = D.cles.indexOf(cle);
+    if (i < 0) throw new Error("clé inconnue " + cle);
+    return (D.ui[lg] && D.ui[lg][i]) || D.ui.fr[i] || "";
+  }
+  function prix(p, lg) {
+    var entier = Math.round(p) === p;
+    try {
+      return new Intl.NumberFormat(lg === "fr" ? "fr-FR" : lg, { style: "currency", currency: "EUR", minimumFractionDigits: entier ? 0 : 2, maximumFractionDigits: 2 }).format(p);
+    } catch (e) { return p + " €"; }
+  }
+  function supplement(p, lg) {
+    return "+" + prix(p, lg);
+  }
+  var ORNEMENT = '<svg class="ornement" viewBox="0 0 240 20" aria-hidden="true"><path d="M4 10h82M154 10h82" stroke="currentColor" stroke-width="1.2"/><path d="M120 2l6 8-6 8-6-8z" fill="currentColor"/><circle cx="100" cy="10" r="2.2" fill="currentColor"/><circle cx="140" cy="10" r="2.2" fill="currentColor"/><path d="M86 10c4-6 10-6 12 0M154 10c-4-6-10-6-12 0" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>';
+
+  function tp(D, lg, cle) {
+    return (D.plus && D.plus[lg] && D.plus[lg][cle]) || (D.plus && D.plus.fr && D.plus.fr[cle]) || "";
+  }
+  function pastilles(D, lg, cle, selection) {
+    if ((D.nonValides || []).indexOf(cle) >= 0) {
+      return { html: '<p class="attente">' + esc(t(D, lg, "attente")) + "</p>", exclu: false };
+    }
+    var liste = (D.allergenesParPlat || {})[cle] || [];
+    var noms = D.allergenes[lg] || D.allergenes.fr;
+    var touche = liste.filter(function (a) { return selection.indexOf(a) >= 0; });
+    var h = "";
+    if (touche.length) {
+      h += '<p class="alerte"><span aria-hidden="true">&#9888;</span> ' + esc(tp(D, lg, "alerte")) + " : " +
+        touche.map(function (a) { return esc(noms[a - 1]); }).join(", ") + "</p>";
+    }
+    if (!liste.length) {
+      return { html: h + '<p class="aucun">' + esc(tp(D, lg, "aucun")) + "</p>", exclu: touche.length > 0 };
+    }
+    var retirables = ((D.retirables || {})[cle] || []);
+    h += '<div class="allergenes"><span class="etiquette">' + esc(tp(D, lg, "contient")) + "</span>" +
+      liste.map(function (a) {
+        var r = retirables.indexOf(a) >= 0;
+        return '<span class="allergene' + (selection.indexOf(a) >= 0 ? " touche" : "") + (r ? " retirable" : "") + '"><b>' + a + "</b>" +
+          esc(noms[a - 1]) + (r ? '<i class="etoile" aria-hidden="true">*</i>' : "") + "</span>";
+      }).join("") + "</div>";
+    if (retirables.length) h += '<p class="note-retirable">' + esc(tp(D, lg, "retirable")) + "</p>";
+    return { html: h, exclu: touche.length > 0 };
+  }
+  function plat(D, lg, p, selection) {
+    var cle = p[0], px = p[1], sup = p[2];
+    var extra = D.allergenesValides ? pastilles(D, lg, cle, selection || []) : null;
+    var h = '<article class="plat' + (extra && extra.exclu ? " exclu" : "") + '" data-plat="' + cle + '"><div class="plat-tete"><h3>' + esc(t(D, lg, cle + "n")) + "</h3>";
+    if (px != null) h += '<span class="prix">' + esc(prix(px, lg)) + "</span>";
+    else if (sup) h += '<span class="supplement">' + esc(supplement(sup, lg)) + "</span>";
+    h += "</div><p class=\"description\">" + esc(t(D, lg, cle + "d")) + "</p>";
+    if (!D.allergenesValides) h += '<p class="attente">' + esc(t(D, lg, "attente")) + "</p>";
+    else h += extra.html;
+    return h + "</article>";
+  }
+
+  function contenu(D, lg, selection) {
+    selection = selection || [];
+    var h = "";
+    if (D.allergenesValides && selection.length) {
+      var ok = Object.keys(D.allergenesParPlat).filter(function (k) {
+        return (D.nonValides || []).indexOf(k) < 0 && !(D.allergenesParPlat[k] || []).some(function (a) { return selection.indexOf(a) >= 0; });
+      }).length;
+      h += '<p class="resume-filtre" role="status">' + esc(tp(D, lg, "compatibles").replace("{n}", ok)) + "</p>";
+    }
+    D.sections.forEach(function (s) {
+      if (s.type === "encart") {
+        h += '<aside class="encart" id="sec-' + s.id + '"><h2>' + esc(t(D, lg, s.titre)) + "</h2><p>" + esc(t(D, lg, s.texte)) + "</p></aside>";
+        return;
+      }
+      if (s.type === "formules") {
+        h += "<svg class=\"grand-filet\" viewBox=\"0 0 520 44\" aria-hidden=\"true\"><path d=\"M6 22h190M324 22h190\" stroke=\"currentColor\" stroke-width=\"1.6\" fill=\"none\"/><path d=\"M196 22c14-9 26-9 34 0-8 9-20 9-34 0zM324 22c-14-9-26-9-34 0 8 9 20 9 34 0z\" fill=\"currentColor\" opacity=\".85\"/><circle cx=\"260\" cy=\"22\" r=\"11\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"/><path d=\"M260 4l4 10-4 8-4-8zM260 40l4-10-4-8-4 8zM242 22l10-4 8 4-8 4zM278 22l-10-4-8 4 8 4z\" fill=\"currentColor\"/><circle cx=\"260\" cy=\"22\" r=\"3\" fill=\"currentColor\"/><path d=\"M214 14c6-5 14-5 18 0M214 30c6 5 14 5 18 0M306 14c-6-5-14-5-18 0M306 30c-6 5-14 5-18 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/></svg>" + '<section class="formules" id="sec-' + s.id + '"><h2>' + esc(t(D, lg, s.titre)) + "</h2>" + ORNEMENT + "<ul>" +
+          s.lignes.map(function (l) {
+            return '<li><span class="formule-nom">' + esc(t(D, lg, l[0])) + '</span><span class="pointilles" aria-hidden="true"></span><span class="prix">' + esc(prix(l[1], lg)) + "</span></li>";
+          }).join("") + "</ul></section>";
+        return;
+      }
+      if (s.type === "enfant") {
+        h += '<section class="enfant" id="sec-' + s.id + '">' + '<svg class="ecu" viewBox="0 0 200 200" aria-hidden="true" fill="currentColor">' + '<path d="M100 18l70 20v52c0 44-30 72-70 92-40-20-70-48-70-92V38z" opacity=".85"/>' + '<path d="M18 26l38 30-8 10-38-30zM182 26l-38 30 8 10 38-30z" opacity=".6"/>' + "</svg>" + '<div class="enfant-tete"><h2>' + esc(t(D, lg, s.titre)) + '</h2><span class="prix">' + esc(prix(s.prix, lg)) + '</span></div><p class="sous">' + esc(t(D, lg, s.sousTitre)) + "</p><ul>" +
+          s.items.map(function (k) { return "<li>" + esc(t(D, lg, k)) + "</li>"; }).join("") + "</ul>" +
+          (!D.allergenesValides ? '<p class="attente">' + esc(t(D, lg, "attente")) + "</p>" : pastilles(D, lg, "ecuyer", selection).html) + "</section>";
+        return;
+      }
+      h += '<section class="categorie" id="sec-' + s.id + '"><h2>' + esc(t(D, lg, s.titre)) +
+        (s.prix != null ? ' <span class="prix-cat">' + esc(prix(s.prix, lg)) + "</span>" : "") + "</h2>" + ORNEMENT + '<div class="plats">';
+      s.plats.forEach(function (p) { h += plat(D, lg, p, selection); });
+      h += "</div>";
+      if (s.note) h += '<p class="note">' + esc(t(D, lg, s.note)) + "</p>";
+      h += "</section>";
+    });
+    return h;
+  }
+  function chips(D, lg) {
+    return D.sections.filter(function (s) { return s.type !== "encart"; }).map(function (s) {
+      return '<a href="#sec-' + s.id + '">' + esc(t(D, lg, s.titre)) + "</a>";
+    }).join("");
+  }
+  function legende(D, lg) {
+    var noms = D.allergenes[lg] || D.allergenes.fr;
+    return '<h2 class="legende-titre">' + esc(tp(D, lg, "legende")) + '</h2><ol class="legende">' +
+      noms.map(function (n, i2) { return "<li><b>" + (i2 + 1) + "</b>" + esc(n) + (lg !== "fr" ? ' <span class="fr" lang="fr">' + esc(D.allergenes.fr[i2]) + "</span>" : "") + "</li>"; }).join("") + "</ol>";
+  }
+  return { esc: esc, t: t, tp: tp, prix: prix, contenu: contenu, chips: chips, legende: legende };
+})();
+if (typeof module !== "undefined") module.exports = MENU_CORE;
+
+;
+(function () {
+  "use strict";
+  var D = MENU_DATA, C = MENU_CORE;
+  var codes = D.langues.map(function (l) { return l[0]; });
+  var etat = { lg: "fr", selection: [] };
+  var LATIN = ["fr","en","es","pt","de","nl","it","id"];
+  var $ = function (s) { return document.querySelector(s); };
+  function detecter() {
+    try { var m = localStorage.getItem("medieval-langue"); if (m && codes.indexOf(m) >= 0) return m; } catch (e) { /* ignoré */ }
+    var prefs = (navigator.languages || [navigator.language || "fr"]).map(function (p) { return String(p).slice(0, 2).toLowerCase(); });
+    for (var i = 0; i < prefs.length; i++) if (codes.indexOf(prefs[i]) >= 0) return prefs[i];
+    return "fr";
+  }
+  function info(lg) { return D.langues.filter(function (l) { return l[0] === lg; })[0]; }
+  function rendre() {
+    var lg = etat.lg, l = info(lg);
+    document.documentElement.lang = lg;
+    document.documentElement.dir = l[2];
+    document.documentElement.classList.toggle("latin", LATIN.indexOf(lg) >= 0);
+    document.title = "Le Médiéval · " + C.t(D, lg, "carte");
+    document.querySelectorAll("[data-t]").forEach(function (el) { el.textContent = C.t(D, lg, el.getAttribute("data-t")); });
+    $("#nom-langue").textContent = l[1];
+    $("#drapeau-langue").textContent = (D.drapeaux || {})[lg] || "";
+    var note = $("#note-trad");
+    note.hidden = lg === "fr";
+    note.textContent = lg === "fr" ? "" : C.t(D, lg, "trad");
+    $("#chips").innerHTML = C.chips(D, lg);
+    $("#carte").innerHTML = C.contenu(D, lg, etat.selection);
+    $("#bandeau-exemple").textContent = C.tp(D, lg, "exemple");
+    $("#bandeau-exemple").hidden = false;
+    $("#txt-allergies").textContent = C.tp(D, lg, "allergies");
+    $("#txt-enfant").textContent = C.tp(D, lg, "boutonEnfant");
+    $("#titre-allergies").textContent = C.tp(D, lg, "filtreTitre");
+    $("#btn-effacer").textContent = C.tp(D, lg, "effacer");
+    $("#btn-voir").textContent = C.tp(D, lg, "voir");
+    $("#legende").innerHTML = C.legende(D, lg);
+    rendreCases();
+    majCompteur();
+    rendreLangues();
+    animer();
+  }
+  function rendreLangues() {
+    var z = $("#liste-langues");
+    z.innerHTML = "";
+    D.langues.forEach(function (l) {
+      var b = document.createElement("button");
+      b.type = "button"; b.lang = l[0]; b.dir = l[2];
+      var dr = document.createElement("span");
+      dr.className = "drapeau";
+      dr.setAttribute("aria-hidden", "true");
+      dr.textContent = (D.drapeaux || {})[l[0]] || "";
+      b.appendChild(dr);
+      b.appendChild(document.createTextNode(l[1]));
+      b.setAttribute("aria-pressed", l[0] === etat.lg ? "true" : "false");
+      b.addEventListener("click", function () {
+        etat.lg = l[0];
+        try { localStorage.setItem("medieval-langue", l[0]); } catch (e) { /* ignoré */ }
+        fermer($("#dlg-langue"));
+        rendre();
+      });
+      z.appendChild(b);
+    });
+  }
+  function majCompteur() {
+    var n = etat.selection.length;
+    $("#compteur").hidden = !n;
+    $("#compteur").textContent = n;
+    $("#btn-allergies").classList.toggle("actif", n > 0);
+  }
+  function rendreCases() {
+    var z = $("#cases"), lg = etat.lg, noms = D.allergenes[lg] || D.allergenes.fr;
+    z.innerHTML = "";
+    noms.forEach(function (nom, i) {
+      var num = i + 1;
+      var lab = document.createElement("label");
+      lab.className = "case";
+      var cb = document.createElement("input");
+      cb.type = "checkbox";
+      cb.checked = etat.selection.indexOf(num) >= 0;
+      cb.addEventListener("change", function () {
+        if (cb.checked) { if (etat.selection.indexOf(num) < 0) etat.selection.push(num); }
+        else etat.selection = etat.selection.filter(function (x) { return x !== num; });
+        etat.selection.sort(function (a, b) { return a - b; });
+        $("#carte").innerHTML = C.contenu(D, etat.lg, etat.selection);
+        majCompteur();
+        animerTout(true);
+      });
+      var b = document.createElement("b");
+      b.textContent = num;
+      var txt = document.createElement("span");
+      txt.textContent = nom;
+      if (lg !== "fr") {
+        var fr = document.createElement("span");
+        fr.className = "fr"; fr.lang = "fr"; fr.textContent = D.allergenes.fr[i];
+        txt.appendChild(fr);
+      }
+      lab.appendChild(cb); lab.appendChild(b); lab.appendChild(txt);
+      z.appendChild(lab);
+    });
+  }
+  function animerTout(immediat) {
+    if (immediat) { document.querySelectorAll(".plat,.formules,.enfant,.encart").forEach(function (p) { p.classList.add("vu"); }); return; }
+    animer();
+  }
+  var obs = null;
+  function animer() {
+    var el = document.querySelectorAll(".plat,.formules,.enfant,.encart");
+    var reduit = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduit || !("IntersectionObserver" in window)) { el.forEach(function (p) { p.classList.add("vu"); }); return; }
+    if (obs) obs.disconnect();
+    obs = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("vu"); obs.unobserve(e.target); } });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    el.forEach(function (p, i) { p.style.transitionDelay = (i % 4) * 60 + "ms"; obs.observe(p); });
+  }
+  function ouvrir(d) { if (typeof d.showModal === "function") d.showModal(); else d.setAttribute("open", ""); }
+  function fermer(d) { if (typeof d.close === "function" && d.open) d.close(); else d.removeAttribute("open"); }
+  document.documentElement.classList.add("anim");
+  (function () {
+    var e = $("#entree");
+    if (!e) return;
+    var ouvert = false;
+    function ouvrir() {
+      if (ouvert) return;
+      ouvert = true;
+      e.classList.add("fissure");
+      setTimeout(function () { e.classList.add("ouvert"); }, 260);
+      setTimeout(function () { e.classList.add("parti"); }, 1700);
+    }
+    e.addEventListener("click", ouvrir);
+    $("#btn-entrer").addEventListener("click", ouvrir);
+    ["wheel", "touchmove", "keydown"].forEach(function (ev) {
+      window.addEventListener(ev, ouvrir, { passive: true, once: true });
+    });
+    setTimeout(ouvrir, 3400);
+  })();
+
+  $("#btn-langue").addEventListener("click", function () { ouvrir($("#dlg-langue")); });
+  $("#btn-allergies").addEventListener("click", function () { ouvrir($("#dlg-allergies")); });
+  $("#btn-enfant").addEventListener("click", function () {
+    var c = document.getElementById("sec-ecuyer");
+    if (c) c.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  $("#btn-effacer").addEventListener("click", function () {
+    etat.selection = [];
+    rendreCases(); majCompteur();
+    $("#carte").innerHTML = C.contenu(D, etat.lg, etat.selection);
+    animerTout(true);
+  });
+  document.querySelectorAll("[data-fermer]").forEach(function (b) { b.addEventListener("click", function () { fermer(b.closest("dialog")); }); });
+  document.querySelectorAll("dialog").forEach(function (d) { d.addEventListener("click", function (e) { if (e.target === d) fermer(d); }); });
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest(".chips a");
+    if (!a) return;
+    var c = document.getElementById(a.getAttribute("href").slice(1));
+    if (c) { e.preventDefault(); c.scrollIntoView({ block: "start" }); }
+  });
+  etat.lg = detecter();
+  rendre();
+})();
+</script>
+</body></html>
