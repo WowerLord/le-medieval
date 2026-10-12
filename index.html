@@ -87,8 +87,9 @@ background:linear-gradient(180deg,var(--rouge-clair),var(--rouge) 60%,#6E0F0F);-
 .outil svg{width:20px;height:20px;flex-shrink:0}
 .outil.actif{border-color:var(--rouge);color:var(--rouge)}
 .compteur{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:11px;background:var(--rouge);color:#fff;font-size:13px;padding:0 6px}
-.barre{flex-wrap:wrap}
-.enfant-lien{flex:1 0 100%;position:relative;overflow:hidden;justify-content:center;gap:10px;
+.barre{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;z-index:8}
+.barre .outil{width:auto}
+.enfant-lien{grid-column:1/-1;position:relative;overflow:hidden;justify-content:center;gap:10px;
 background:linear-gradient(180deg,var(--carte),var(--papier-2));border-color:var(--rouge);color:var(--rouge)}
 .scene-chateau{display:block;flex-shrink:0;line-height:0}
 .enfant-lien .chateau{width:112px;height:42px;color:var(--rouge);opacity:.9;overflow:visible}
@@ -116,9 +117,10 @@ background:linear-gradient(180deg,var(--carte),var(--papier-2));border-color:var
 .coin{position:absolute;width:52px;height:52px}
 .ch-g{top:-2px;left:-2px}.ch-d{top:-2px;right:-2px;transform:scaleX(-1)}
 .cb-g{bottom:-2px;left:-2px;transform:scaleY(-1)}.cb-d{bottom:-2px;right:-2px;transform:scale(-1,-1)}
-.entete,.barre,.contenu,footer{position:relative;z-index:1}
+.entete,.contenu,footer{position:relative;z-index:1}
 .grand-filet{display:block;width:100%;max-width:520px;margin:28px auto 2px;color:var(--rouge)}
-.contenu{padding:0 24px}
+.contenu{padding:0 24px;position:relative;z-index:1}
+.barre+.contenu{margin-top:0}
 .avis{margin:12px 0 0;padding:10px 12px;border-radius:8px;border:1px solid var(--bord);background:var(--carte);color:var(--encre-douce);font-size:13px;text-align:center}
 .prevenir{margin:10px 0 0;padding:11px 14px;border-radius:8px;background:var(--alerte-fond);color:var(--alerte-texte);font-weight:650;display:flex;gap:10px;align-items:flex-start}
 .chips{display:flex;gap:8px;overflow-x:auto;padding:14px 2px 2px;scrollbar-width:none}
